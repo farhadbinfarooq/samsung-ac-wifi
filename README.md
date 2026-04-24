@@ -52,13 +52,13 @@ Build a separate IR transmitter circuit and connect a VS1838B IR receiver module
 
 **Connections:**
 
-| ESP32 Pin | Connects to |
-|---|---|
-| GPIO4 | 1kΩ → Base of BC547 |
-| 3.3V | Collector → IR LED Anode |
-| GND | Emitter of BC547, IR LED Cathode, VS1838B GND (pin 2) |
-| GPIO15 | VS1838B OUT (pin 1) |
-| 3.3V | VS1838B VCC (pin 3) |
+| ESP32 Pin | Connects to | Notes |
+|---|---|---|
+| GPIO4 | 1kΩ → Base of BC547 | IR transmit |
+| 5V | IR LED Anode (+) via Collector | IR LED power |
+| GND | BC547 Emitter, VS1838B GND (pin 2) | Common ground |
+| GPIO15 | VS1838B OUT (pin 1) | IR receive |
+| 3.3V | VS1838B VCC (pin 3) | Receiver power |
 
 ---
 
@@ -166,7 +166,7 @@ climate:
 ## Supported Features
 
 | Feature | Supported |
-|---|---|
+|---|---|---|
 | Cool | ✅ |
 | Heat | ✅ |
 | Dry | ✅ |
@@ -186,7 +186,7 @@ climate:
 ## Tested Models
 
 | Model | Status |
-|---|---|
+|---|---|---|
 | Samsung AR12MCFHDWKYFE | ✅ Tested |
 
 If you test this on another Samsung model, please open an issue or PR to update this list.
