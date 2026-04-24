@@ -13,9 +13,9 @@ Tested on **Samsung AR12MCFHDWKYFE** and similar Samsung Wind-Free series units.
 
 ```yaml
 external_components:
-  - source: github://YOUR_USERNAME/esphome-samsung-ac@main
+  - source: github://farhadbinfarooq/samsung-ac-wifi@main
     components: [samsung]
-    refresh: always
+    
 ```
 
 ### Option B — Local component
@@ -95,6 +95,11 @@ remote_transmitter:
     mode: OUTPUT_OPEN_DRAIN
     allow_other_uses: true
   carrier_duty_percent: 50%
+
+climate:
+  - platform: samsung
+    name: "Remote Controller"
+    receiver_id: ir_receiver
 ```
 
 ---
@@ -112,9 +117,9 @@ esp32:
     type: arduino
 
 external_components:
-  - source: github://YOUR_USERNAME/esphome-samsung-ac@main
+  - source: github://farhadbinfarooq/samsung-ac-wifi@main
     components: [samsung]
-    refresh: always
+    
 
 wifi:
   ssid: !secret wifi_ssid
@@ -152,7 +157,7 @@ remote_receiver:
 
 climate:
   - platform: samsung
-    name: "Samsung AC"
+    name: "Remote Controller"
     receiver_id: ir_receiver
 ```
 
