@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="monospace, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="340" fill="#1a1a2e" rx="12"/>
+  <text x="400" y="30" text-anchor="middle" fill="#e0e0e0" font-size="15" font-weight="bold">Invasive Wiring — ESP32 directly on Samsung AC IR Board</text>
+
+  <!-- ESP32 Board -->
+  <rect x="30" y="55" width="160" height="220" rx="8" fill="#2d2d44" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="110" y="76" text-anchor="middle" fill="#4a9eff" font-size="12" font-weight="bold">ESP32</text>
+
+  <!-- 5V pin -->
+  <rect x="158" y="92" width="32" height="18" rx="3" fill="#e74c3c"/>
+  <text x="174" y="105" text-anchor="middle" fill="white" font-size="9" font-weight="bold">5V</text>
+  <text x="115" y="105" text-anchor="end" fill="#e0e0e0" font-size="10">5V (VIN)</text>
+
+  <!-- GND -->
+  <rect x="158" y="118" width="32" height="18" rx="3" fill="#555"/>
+  <text x="174" y="131" text-anchor="middle" fill="white" font-size="9" font-weight="bold">GND</text>
+  <text x="115" y="131" text-anchor="end" fill="#e0e0e0" font-size="10">GND</text>
+
+  <!-- GPIO4 TX+RX -->
+  <rect x="158" y="168" width="32" height="18" rx="3" fill="#f39c12"/>
+  <text x="174" y="181" text-anchor="middle" fill="white" font-size="8" font-weight="bold">IO4</text>
+  <text x="115" y="181" text-anchor="end" fill="#e0e0e0" font-size="10">GPIO4</text>
+  <text x="115" y="193" text-anchor="end" fill="#888" font-size="8">TX + RX</text>
+
+  <!-- open-drain note -->
+  <rect x="38" y="220" width="144" height="42" rx="4" fill="#2a1a00" stroke="#f39c12" stroke-width="1"/>
+  <text x="110" y="236" text-anchor="middle" fill="#f39c12" font-size="9" font-weight="bold">OUTPUT_OPEN_DRAIN</text>
+  <text x="110" y="250" text-anchor="middle" fill="#888" font-size="8">allow_other_uses: true</text>
+  <text x="110" y="262" text-anchor="middle" fill="#888" font-size="8">same pin TX and RX</text>
+
+  <!-- Samsung AC IR Board -->
+  <rect x="430" y="55" width="320" height="200" rx="10" fill="#2a2a18" stroke="#f0c040" stroke-width="2"/>
+  <text x="590" y="80" text-anchor="middle" fill="#f0c040" font-size="13" font-weight="bold">Samsung AC IR Board</text>
+
+  <!-- IR LED on board -->
+  <circle cx="530" cy="155" r="22" fill="#111100" stroke="#f0c040" stroke-width="2"/>
+  <circle cx="530" cy="155" r="8" fill="#333300"/>
+  <text x="530" y="151" text-anchor="middle" fill="#f0c040" font-size="8">IR</text>
+  <text x="530" y="162" text-anchor="middle" fill="#f0c040" font-size="8">LED</text>
+  <!-- emission rays -->
+  <line x1="549" y1="138" x2="562" y2="126" stroke="#ffff44" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <line x1="554" y1="147" x2="569" y2="140" stroke="#ffff44" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <line x1="553" y1="155" x2="570" y2="155" stroke="#ffff44" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+  <!-- IR LED signal pad / solder point -->
+  <circle cx="530" cy="198" r="7" fill="#f39c12" stroke="#fff" stroke-width="1"/>
+  <text x="530" y="215" text-anchor="middle" fill="#f39c12" font-size="9" font-weight="bold">IR OUT</text>
+  <text x="530" y="227" text-anchor="middle" fill="#888" font-size="8">signal pad</text>
+  <!-- trace from pad to LED -->
+  <line x1="530" y1="191" x2="530" y2="177" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+  <!-- GND pad -->
+  <circle cx="620" cy="198" r="7" fill="#555" stroke="#fff" stroke-width="1"/>
+  <text x="620" y="215" text-anchor="middle" fill="#888" font-size="9" font-weight="bold">GND</text>
+  <text x="620" y="227" text-anchor="middle" fill="#666" font-size="8">pad</text>
+
+  <!-- 5V pad -->
+  <circle cx="710" cy="198" r="7" fill="#e74c3c" stroke="#fff" stroke-width="1"/>
+  <text x="710" y="215" text-anchor="middle" fill="#e74c3c" font-size="9" font-weight="bold">5V</text>
+  <text x="710" y="227" text-anchor="middle" fill="#666" font-size="8">pad</text>
+
+  <!-- decorative board traces -->
+  <line x1="445" y1="198" x2="523" y2="198" stroke="#444" stroke-width="1" stroke-dasharray="2 3"/>
+  <line x1="537" y1="198" x2="613" y2="198" stroke="#444" stroke-width="1" stroke-dasharray="2 3"/>
+  <line x1="627" y1="198" x2="703" y2="198" stroke="#444" stroke-width="1" stroke-dasharray="2 3"/>
+
+  <!-- Other LEDs on board (decorative) -->
+  <circle cx="650" cy="120" r="8" fill="#002200" stroke="#00aa00" stroke-width="1.5"/>
+  <text x="650" y="124" text-anchor="middle" fill="#00aa00" font-size="7">LED</text>
+  <circle cx="700" cy="120" r="8" fill="#002200" stroke="#00aa00" stroke-width="1.5"/>
+  <text x="700" y="124" text-anchor="middle" fill="#00aa00" font-size="7">LED</text>
+
+  <!-- Wires from ESP to board pads -->
+  <!-- 5V -->
+  <line x1="190" y1="101" x2="370" y2="101" stroke="#e74c3c" stroke-width="2"/>
+  <line x1="370" y1="101" x2="370" y2="198" stroke="#e74c3c" stroke-width="2"/>
+  <line x1="370" y1="198" x2="703" y2="198" stroke="#e74c3c" stroke-width="2"/>
+
+  <!-- GND -->
+  <line x1="190" y1="127" x2="355" y2="127" stroke="#555" stroke-width="2"/>
+  <line x1="355" y1="127" x2="355" y2="200" stroke="#555" stroke-width="2"/>
+  <line x1="355" y1="200" x2="613" y2="200" stroke="#555" stroke-width="2"/>
+
+  <!-- GPIO4 IR signal -->
+  <line x1="190" y1="177" x2="340" y2="177" stroke="#f39c12" stroke-width="2.5"/>
+  <line x1="340" y1="177" x2="340" y2="202" stroke="#f39c12" stroke-width="2.5"/>
+  <line x1="340" y1="202" x2="523" y2="202" stroke="#f39c12" stroke-width="2.5"/>
+
+  <!-- Wire labels -->
+  <text x="270" y="97" fill="#e74c3c" font-size="9">5V</text>
+  <text x="270" y="123" fill="#888" font-size="9">GND</text>
+  <text x="255" y="173" fill="#f39c12" font-size="9">IR signal</text>
+
+  <!-- Bottom note -->
+  <rect x="30" y="290" width="740" height="35" rx="6" fill="#1e1e3a" stroke="#4a9eff" stroke-width="1"/>
+  <text x="400" y="306" text-anchor="middle" fill="#4a9eff" font-size="10" font-weight="bold">⚠  Identify solder pads with a multimeter before connecting. Board runs at 5V — use a voltage divider on the IR signal line if needed.</text>
+  <text x="400" y="320" text-anchor="middle" fill="#888" font-size="9">Tap directly onto the IR LED signal trace on the board for most reliable TX and RX.</text>
+
+  <!-- Legend -->
+  <line x1="30" y1="278" x2="760" y2="278" stroke="#333" stroke-width="0.5"/>
+  <line x1="40" y1="285" x2="65" y2="285" stroke="#e74c3c" stroke-width="2"/>
+  <text x="70" y="289" fill="#e0e0e0" font-size="10">5V</text>
+  <line x1="100" y1="285" x2="125" y2="285" stroke="#555" stroke-width="2"/>
+  <text x="130" y="289" fill="#e0e0e0" font-size="10">GND</text>
+  <line x1="170" y1="285" x2="195" y2="285" stroke="#f39c12" stroke-width="2"/>
+  <text x="200" y="289" fill="#e0e0e0" font-size="10">GPIO4 IR signal (TX + RX, open-drain)</text>
+</svg>
