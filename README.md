@@ -4,7 +4,6 @@ An ESPHome external component for Samsung split-type air conditioners using infr
 
 Tested on **Samsung AR12MCFHDWKYFE** and similar Samsung Wind-Free series units.
 
-
 ---
 
 ## Installation
@@ -15,7 +14,6 @@ Tested on **Samsung AR12MCFHDWKYFE** and similar Samsung Wind-Free series units.
 external_components:
   - source: github://farhadbinfarooq/samsung-ac-wifi@main
     components: [samsung]
-    
 ```
 
 ### Option B — Local component
@@ -45,6 +43,7 @@ Build a separate IR transmitter circuit and connect a VS1838B IR receiver module
 ![Non-invasive wiring](assets/wiring_noninvasive.svg)
 
 **Components needed:**
+
 - IR LED (940nm, e.g. TSAL6400)
 - BC547 NPN transistor
 - 1kΩ resistor
@@ -53,7 +52,7 @@ Build a separate IR transmitter circuit and connect a VS1838B IR receiver module
 **Connections:**
 
 | ESP32 Pin | Connects to | Notes |
-|---|---|---|
+| --- | --- | --- |
 | GPIO4 | 1kΩ → Base of BC547 | IR transmit |
 | 5V | IR LED Anode (+) via Collector | IR LED power |
 | GND | BC547 Emitter, VS1838B GND (pin 2) | Common ground |
@@ -71,6 +70,7 @@ Connect the ESP32 directly to the Samsung AC's IR board by tapping onto the IR L
 > ⚠️ **Warning:** Identify the correct solder pads using a multimeter before connecting. Wrong connections may damage your AC board or ESP32. The IR signal line on Samsung boards runs at 5V logic — use a voltage divider or logic level shifter if your ESP32 GPIO is not 5V tolerant.
 
 **Solder pads to identify:**
+
 - **5V** — powers the ESP32 via VIN
 - **GND** — common ground
 - **IR signal** — the line driving the IR LED on the board (shared TX+RX)
@@ -119,7 +119,6 @@ esp32:
 external_components:
   - source: github://farhadbinfarooq/samsung-ac-wifi@main
     components: [samsung]
-    
 
 wifi:
   ssid: !secret wifi_ssid
@@ -166,7 +165,7 @@ climate:
 ## Supported Features
 
 | Feature | Supported |
-|---|---|---|
+| --- | --- |
 | Cool | ✅ |
 | Heat | ✅ |
 | Dry | ✅ |
@@ -186,10 +185,9 @@ climate:
 ## Tested Models
 
 | Model | Status |
-|---|---|---|
+| --- | --- |
 | Samsung AR12MCFHDWKYFE | ✅ Tested |
 
 If you test this on another Samsung model, please open an issue or PR to update this list.
 
 ---
-
