@@ -140,6 +140,7 @@ logger:
   level: DEBUG
 
 remote_transmitter:
+  id: ir_transmitter
   pin: GPIO4
   carrier_duty_percent: 50%
 
@@ -152,12 +153,12 @@ remote_receiver:
       input: true
       pullup: true
   tolerance: 55%
-  dump: all
 
 climate:
   - platform: samsung
     name: "Remote Controller"
     receiver_id: ir_receiver
+    transmitter_id: ir_transmitter
 ```
 
 ---
