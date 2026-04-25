@@ -1,153 +1,314 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" font-family="monospace, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 620" font-family="monospace, sans-serif">
   <!-- Background -->
-  <rect width="820" height="440" fill="#1a1a2e" rx="12"/>
-  <text x="410" y="32" text-anchor="middle" fill="#e0e0e0" font-size="15" font-weight="bold">Non-Invasive Wiring — Separate IR LED + Receiver Circuit</text>
+  <rect width="860" height="620" fill="#1a1a2e" rx="12"/>
+  <text x="430" y="26" text-anchor="middle" fill="#e0e0e0" font-size="14" font-weight="bold">Non-Invasive Wiring — ESP32 DevKit V1 (30-pin, USB down)</text>
 
-  <!-- ESP32 Board -->
-  <rect x="20" y="55" width="165" height="340" rx="8" fill="#2d2d44" stroke="#4a9eff" stroke-width="1.5"/>
-  <text x="103" y="76" text-anchor="middle" fill="#4a9eff" font-size="12" font-weight="bold">ESP32</text>
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- ESP32 DevKit V1 Board                                      -->
+  <!-- LEFT col (top→bottom): EN,GPIO36,GPIO39,GPIO34,GPIO35,    -->
+  <!--   GPIO32,GPIO33,GPIO25,GPIO26,GPIO27,GPIO14,GPIO12,GND,VIN-->
+  <!-- RIGHT col (top→bottom): GPIO23,GPIO22,GPIO1,GPIO3,GPIO21, -->
+  <!--   GPIO19,GPIO18,GPIO5,GPIO17,GPIO16,GPIO4,GPIO0,GPIO2,    -->
+  <!--   GPIO15,GND,3V3                                          -->
+  <!-- USB at bottom                                              -->
+  <!-- ══════════════════════════════════════════════════════════ -->
 
-  <!-- 5V pin -->
-  <rect x="153" y="90" width="32" height="18" rx="3" fill="#c0392b"/>
-  <text x="169" y="103" text-anchor="middle" fill="white" font-size="9" font-weight="bold">5V</text>
-  <text x="110" y="103" text-anchor="end" fill="#e0e0e0" font-size="10">5V</text>
+  <!-- Board body -->
+  <rect x="348" y="48" width="114" height="510" rx="8" fill="#0d2b0d" stroke="#4a9eff" stroke-width="1.5"/>
+  <!-- Antenna -->
+  <rect x="368" y="48" width="74" height="32" rx="4" fill="#1a3a1a" stroke="#4a9eff" stroke-width="1"/>
+  <text x="405" y="67" text-anchor="middle" fill="#4a9eff" font-size="8" font-weight="bold">ESP32-WROOM</text>
+  <!-- Chip -->
+  <rect x="365" y="210" width="80" height="65" rx="4" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <text x="405" y="246" text-anchor="middle" fill="#555" font-size="8">ESP32</text>
+  <!-- LEDs -->
+  <circle cx="383" cy="92" r="3" fill="#ff2200" opacity="0.8"/>
+  <circle cx="395" cy="92" r="3" fill="#0044ff" opacity="0.8"/>
+  <!-- USB at bottom -->
+  <rect x="376" y="538" width="58" height="20" rx="3" fill="#333" stroke="#888" stroke-width="1"/>
+  <text x="405" y="552" text-anchor="middle" fill="#888" font-size="8">USB</text>
 
-  <!-- 3.3V pin -->
-  <rect x="153" y="116" width="32" height="18" rx="3" fill="#e67e22"/>
-  <text x="169" y="129" text-anchor="middle" fill="white" font-size="8" font-weight="bold">3V3</text>
-  <text x="110" y="129" text-anchor="end" fill="#e0e0e0" font-size="10">3.3V</text>
+  <!-- Pin spacing: 30px, left col starts y=105, right col starts y=105 -->
 
-  <!-- GND pin -->
-  <rect x="153" y="142" width="32" height="18" rx="3" fill="#555"/>
-  <text x="169" y="155" text-anchor="middle" fill="white" font-size="9" font-weight="bold">GND</text>
-  <text x="110" y="155" text-anchor="end" fill="#e0e0e0" font-size="10">GND</text>
+  <!-- ═══ LEFT COLUMN (x=348, pins exit left) ═══ -->
+  <!-- EN -->
+  <rect x="304" y="98" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="108" text-anchor="middle" fill="#aaa" font-size="7">EN</text>
+  <line x1="348" y1="105" x2="304" y2="105" stroke="#444" stroke-width="1"/>
 
-  <!-- GPIO4 TX -->
-  <rect x="153" y="196" width="32" height="18" rx="3" fill="#27ae60"/>
-  <text x="169" y="209" text-anchor="middle" fill="white" font-size="9" font-weight="bold">IO4</text>
-  <text x="110" y="209" text-anchor="end" fill="#e0e0e0" font-size="10">GPIO4</text>
-  <text x="110" y="221" text-anchor="end" fill="#888" font-size="8">TX</text>
+  <!-- GPIO36 -->
+  <rect x="304" y="128" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="138" text-anchor="middle" fill="#aaa" font-size="7">GPIO36</text>
+  <line x1="348" y1="135" x2="304" y2="135" stroke="#444" stroke-width="1"/>
 
-  <!-- GPIO15 RX -->
-  <rect x="153" y="256" width="32" height="18" rx="3" fill="#8e44ad"/>
-  <text x="169" y="269" text-anchor="middle" fill="white" font-size="9" font-weight="bold">IO15</text>
-  <text x="110" y="269" text-anchor="end" fill="#e0e0e0" font-size="10">GPIO15</text>
-  <text x="110" y="281" text-anchor="end" fill="#888" font-size="8">RX</text>
+  <!-- GPIO39 -->
+  <rect x="304" y="158" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="168" text-anchor="middle" fill="#aaa" font-size="7">GPIO39</text>
+  <line x1="348" y1="165" x2="304" y2="165" stroke="#444" stroke-width="1"/>
 
-  <!-- ── IR TRANSMITTER ── -->
-  <text x="390" y="68" text-anchor="middle" fill="#f39c12" font-size="11">IR TRANSMITTER CIRCUIT</text>
-  <rect x="300" y="78" width="150" height="195" rx="6" fill="#252540" stroke="#f39c12" stroke-width="1" stroke-dasharray="4 2"/>
+  <!-- GPIO34 -->
+  <rect x="304" y="188" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="198" text-anchor="middle" fill="#aaa" font-size="7">GPIO34</text>
+  <line x1="348" y1="195" x2="304" y2="195" stroke="#444" stroke-width="1"/>
 
-  <!-- Resistor 1kΩ -->
-  <rect x="230" y="199" width="58" height="16" rx="4" fill="#3d3d00" stroke="#f39c12" stroke-width="1"/>
-  <text x="259" y="210" text-anchor="middle" fill="#f39c12" font-size="9">1kΩ</text>
+  <!-- GPIO35 -->
+  <rect x="304" y="218" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="228" text-anchor="middle" fill="#aaa" font-size="7">GPIO35</text>
+  <line x1="348" y1="225" x2="304" y2="225" stroke="#444" stroke-width="1"/>
 
-  <!-- Wire GPIO4 → resistor -->
-  <line x1="185" y1="205" x2="230" y2="205" stroke="#27ae60" stroke-width="2"/>
-  <!-- Wire resistor → base -->
-  <line x1="288" y1="205" x2="318" y2="205" stroke="#27ae60" stroke-width="2"/>
+  <!-- GPIO32 -->
+  <rect x="304" y="248" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="258" text-anchor="middle" fill="#aaa" font-size="7">GPIO32</text>
+  <line x1="348" y1="255" x2="304" y2="255" stroke="#444" stroke-width="1"/>
 
-  <!-- BC547 transistor -->
-  <circle cx="350" cy="196" r="22" fill="none" stroke="#f39c12" stroke-width="1.5"/>
-  <line x1="318" y1="196" x2="333" y2="196" stroke="#f39c12" stroke-width="2"/>
-  <line x1="333" y1="181" x2="333" y2="211" stroke="#f39c12" stroke-width="2"/>
-  <line x1="333" y1="184" x2="356" y2="171" stroke="#f39c12" stroke-width="2"/>
-  <line x1="333" y1="208" x2="356" y2="221" stroke="#f39c12" stroke-width="2"/>
-  <polygon points="353,219 360,224 356,214" fill="#f39c12"/>
-  <text x="346" y="191" fill="#f0c040" font-size="9">BC547</text>
-  <text x="312" y="240" fill="#888" font-size="8">NPN</text>
-  <text x="311" y="200" fill="#888" font-size="8">B</text>
-  <text x="358" y="168" fill="#888" font-size="8">C</text>
-  <text x="358" y="234" fill="#888" font-size="8">E</text>
+  <!-- GPIO33 -->
+  <rect x="304" y="278" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="288" text-anchor="middle" fill="#aaa" font-size="7">GPIO33</text>
+  <line x1="348" y1="285" x2="304" y2="285" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO25 -->
+  <rect x="304" y="308" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="318" text-anchor="middle" fill="#aaa" font-size="7">GPIO25</text>
+  <line x1="348" y1="315" x2="304" y2="315" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO26 -->
+  <rect x="304" y="338" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="348" text-anchor="middle" fill="#aaa" font-size="7">GPIO26</text>
+  <line x1="348" y1="345" x2="304" y2="345" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO27 -->
+  <rect x="304" y="368" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="378" text-anchor="middle" fill="#aaa" font-size="7">GPIO27</text>
+  <line x1="348" y1="375" x2="304" y2="375" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO14 -->
+  <rect x="304" y="398" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="408" text-anchor="middle" fill="#aaa" font-size="7">GPIO14</text>
+  <line x1="348" y1="405" x2="304" y2="405" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO12 -->
+  <rect x="304" y="428" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="326" y="438" text-anchor="middle" fill="#aaa" font-size="7">GPIO12</text>
+  <line x1="348" y1="435" x2="304" y2="435" stroke="#444" stroke-width="1"/>
+
+  <!-- GND left -->
+  <rect x="304" y="458" width="44" height="14" rx="2" fill="#555"/>
+  <text x="326" y="468" text-anchor="middle" fill="white" font-size="7" font-weight="bold">GND</text>
+  <line x1="348" y1="465" x2="304" y2="465" stroke="#555" stroke-width="2"/>
+
+  <!-- VIN -->
+  <rect x="304" y="488" width="44" height="14" rx="2" fill="#c0392b"/>
+  <text x="326" y="498" text-anchor="middle" fill="white" font-size="7" font-weight="bold">VIN</text>
+  <line x1="348" y1="495" x2="304" y2="495" stroke="#c0392b" stroke-width="2"/>
+
+  <!-- ═══ RIGHT COLUMN (x=462, pins exit right) ═══ -->
+  <!-- GPIO23 -->
+  <rect x="462" y="98" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="108" text-anchor="middle" fill="#aaa" font-size="7">GPIO23</text>
+  <line x1="462" y1="105" x2="506" y2="105" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO22 -->
+  <rect x="462" y="128" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="138" text-anchor="middle" fill="#aaa" font-size="7">GPIO22</text>
+  <line x1="462" y1="135" x2="506" y2="135" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO1 -->
+  <rect x="462" y="158" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="168" text-anchor="middle" fill="#aaa" font-size="7">GPIO1</text>
+  <line x1="462" y1="165" x2="506" y2="165" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO3 -->
+  <rect x="462" y="188" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="198" text-anchor="middle" fill="#aaa" font-size="7">GPIO3</text>
+  <line x1="462" y1="195" x2="506" y2="195" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO21 -->
+  <rect x="462" y="218" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="228" text-anchor="middle" fill="#aaa" font-size="7">GPIO21</text>
+  <line x1="462" y1="225" x2="506" y2="225" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO19 -->
+  <rect x="462" y="248" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="258" text-anchor="middle" fill="#aaa" font-size="7">GPIO19</text>
+  <line x1="462" y1="255" x2="506" y2="255" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO18 -->
+  <rect x="462" y="278" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="288" text-anchor="middle" fill="#aaa" font-size="7">GPIO18</text>
+  <line x1="462" y1="285" x2="506" y2="285" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO5 -->
+  <rect x="462" y="308" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="318" text-anchor="middle" fill="#aaa" font-size="7">GPIO5</text>
+  <line x1="462" y1="315" x2="506" y2="315" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO17 -->
+  <rect x="462" y="338" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="348" text-anchor="middle" fill="#aaa" font-size="7">GPIO17</text>
+  <line x1="462" y1="345" x2="506" y2="345" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO16 -->
+  <rect x="462" y="368" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="378" text-anchor="middle" fill="#aaa" font-size="7">GPIO16</text>
+  <line x1="462" y1="375" x2="506" y2="375" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO4 — TX highlighted -->
+  <rect x="462" y="398" width="44" height="14" rx="2" fill="#27ae60"/>
+  <text x="484" y="408" text-anchor="middle" fill="white" font-size="7" font-weight="bold">GPIO4</text>
+  <line x1="462" y1="405" x2="506" y2="405" stroke="#27ae60" stroke-width="2"/>
+
+  <!-- GPIO0 -->
+  <rect x="462" y="428" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="438" text-anchor="middle" fill="#aaa" font-size="7">GPIO0</text>
+  <line x1="462" y1="435" x2="506" y2="435" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO2 -->
+  <rect x="462" y="443" width="44" height="14" rx="2" fill="#2d4a2d"/>
+  <text x="484" y="453" text-anchor="middle" fill="#aaa" font-size="7">GPIO2</text>
+  <line x1="462" y1="450" x2="506" y2="450" stroke="#444" stroke-width="1"/>
+
+  <!-- GPIO15 — RX highlighted -->
+  <rect x="462" y="458" width="44" height="14" rx="2" fill="#8e44ad"/>
+  <text x="484" y="468" text-anchor="middle" fill="white" font-size="7" font-weight="bold">GPIO15</text>
+  <line x1="462" y1="465" x2="506" y2="465" stroke="#8e44ad" stroke-width="2"/>
+
+  <!-- GND right -->
+  <rect x="462" y="473" width="44" height="14" rx="2" fill="#555"/>
+  <text x="484" y="483" text-anchor="middle" fill="white" font-size="7" font-weight="bold">GND</text>
+  <line x1="462" y1="480" x2="506" y2="480" stroke="#555" stroke-width="2"/>
+
+  <!-- 3V3 -->
+  <rect x="462" y="488" width="44" height="14" rx="2" fill="#e67e22"/>
+  <text x="484" y="498" text-anchor="middle" fill="white" font-size="7" font-weight="bold">3V3</text>
+  <line x1="462" y1="495" x2="506" y2="495" stroke="#e67e22" stroke-width="2"/>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- IR TRANSMITTER CIRCUIT (left side)         -->
+  <!-- ══════════════════════════════════════════ -->
+  <text x="145" y="44" text-anchor="middle" fill="#f39c12" font-size="11" font-weight="bold">IR TRANSMITTER</text>
+  <rect x="20" y="55" width="265" height="265" rx="6" fill="#252540" stroke="#f39c12" stroke-width="1" stroke-dasharray="4 2"/>
 
   <!-- IR LED -->
-  <ellipse cx="400" cy="138" rx="16" ry="16" fill="#1a1a00" stroke="#f39c12" stroke-width="1.5"/>
-  <text x="400" y="134" text-anchor="middle" fill="#f39c12" font-size="7">IR</text>
-  <text x="400" y="144" text-anchor="middle" fill="#f39c12" font-size="7">LED</text>
-  <line x1="414" y1="125" x2="425" y2="115" stroke="#ffff00" stroke-width="1.5" stroke-dasharray="3 2"/>
-  <line x1="418" y1="132" x2="431" y2="127" stroke="#ffff00" stroke-width="1.5" stroke-dasharray="3 2"/>
-  <text x="434" y="115" fill="#ffff00" font-size="8">940nm</text>
+  <ellipse cx="105" cy="115" rx="18" ry="18" fill="#1a1a00" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="105" y="111" text-anchor="middle" fill="#f39c12" font-size="7">IR</text>
+  <text x="105" y="121" text-anchor="middle" fill="#f39c12" font-size="7">LED</text>
+  <line x1="121" y1="102" x2="133" y2="92" stroke="#ffff00" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <line x1="125" y1="110" x2="139" y2="105" stroke="#ffff00" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="141" y="93" fill="#ffff00" font-size="7">940nm</text>
 
-  <!-- Collector → LED anode -->
-  <line x1="356" y1="171" x2="385" y2="138" stroke="#f39c12" stroke-width="1.5"/>
+  <!-- LED anode (+) → VIN (left col, y=495) via top rail -->
+  <line x1="105" y1="97" x2="105" y2="68" stroke="#c0392b" stroke-width="2"/>
+  <line x1="105" y1="68" x2="292" y2="68" stroke="#c0392b" stroke-width="2"/>
+  <line x1="292" y1="68" x2="292" y2="495" stroke="#c0392b" stroke-width="2"/>
+  <line x1="292" y1="495" x2="304" y2="495" stroke="#c0392b" stroke-width="2"/>
+  <text x="195" y="64" text-anchor="middle" fill="#c0392b" font-size="8">5V → VIN</text>
 
-  <!-- LED cathode → 5V rail (red solid) -->
-  <line x1="400" y1="122" x2="400" y2="86" stroke="#c0392b" stroke-width="2"/>
-  <line x1="400" y1="86" x2="185" y2="86" stroke="#c0392b" stroke-width="2"/>
-  <line x1="185" y1="86" x2="185" y2="99" stroke="#c0392b" stroke-width="2"/>
-  <text x="290" y="82" text-anchor="middle" fill="#c0392b" font-size="9">5V → IR LED(+)</text>
+  <!-- BC547 -->
+  <circle cx="105" cy="192" r="24" fill="none" stroke="#f39c12" stroke-width="1.5"/>
+  <line x1="58" y1="192" x2="82" y2="192" stroke="#f39c12" stroke-width="2"/>
+  <line x1="82" y1="176" x2="82" y2="208" stroke="#f39c12" stroke-width="2"/>
+  <line x1="82" y1="179" x2="107" y2="166" stroke="#f39c12" stroke-width="2"/>
+  <line x1="82" y1="205" x2="107" y2="218" stroke="#f39c12" stroke-width="2"/>
+  <polygon points="104,216 112,222 108,211" fill="#f39c12"/>
+  <text x="96" y="187" fill="#f0c040" font-size="8">BC547</text>
+  <text x="60" y="190" fill="#888" font-size="7">B</text>
+  <text x="109" y="164" fill="#888" font-size="7">C</text>
+  <text x="109" y="232" fill="#888" font-size="7">E</text>
 
-  <!-- Emitter → GND -->
-  <line x1="356" y1="221" x2="356" y2="265" stroke="#555" stroke-width="2"/>
-  <line x1="356" y1="265" x2="185" y2="265" stroke="#555" stroke-width="2"/>
-  <line x1="185" y1="265" x2="185" y2="151" stroke="#555" stroke-width="2"/>
+  <!-- Collector → LED cathode -->
+  <line x1="107" y1="166" x2="105" y2="133" stroke="#f39c12" stroke-width="1.5"/>
 
-  <!-- Labels in box -->
-  <text x="308" y="258" fill="#888" font-size="9">Base ← GPIO4 via 1kΩ</text>
-  <text x="308" y="270" fill="#888" font-size="9">Collector → IR LED (+)</text>
-  <text x="308" y="282" fill="#888" font-size="9">Emitter → GND</text>
+  <!-- 1kΩ base resistor -->
+  <rect x="28" y="185" width="44" height="14" rx="4" fill="#3d3d00" stroke="#f39c12" stroke-width="1"/>
+  <text x="50" y="195" text-anchor="middle" fill="#f39c12" font-size="8">1kΩ</text>
 
-  <!-- ── VS1838B RECEIVER ── -->
-  <text x="640" y="68" text-anchor="middle" fill="#8e44ad" font-size="11">IR RECEIVER (VS1838B)</text>
-  <rect x="530" y="78" width="255" height="175" rx="6" fill="#252540" stroke="#8e44ad" stroke-width="1" stroke-dasharray="4 2"/>
+  <!-- GPIO4 → resistor: right col GPIO4 (y=405) → bottom bus → left -->
+  <line x1="506" y1="405" x2="535" y2="405" stroke="#27ae60" stroke-width="2"/>
+  <line x1="535" y1="405" x2="535" y2="565" stroke="#27ae60" stroke-width="2"/>
+  <line x1="535" y1="565" x2="50" y2="565" stroke="#27ae60" stroke-width="2"/>
+  <line x1="50" y1="565" x2="50" y2="199" stroke="#27ae60" stroke-width="2"/>
+  <line x1="50" y1="199" x2="72" y2="199" stroke="#27ae60" stroke-width="2"/>
+  <text x="290" y="578" text-anchor="middle" fill="#27ae60" font-size="8">GPIO4 → 1kΩ → BC547 Base</text>
+
+  <!-- Emitter → GND left col (y=465) -->
+  <line x1="107" y1="218" x2="107" y2="248" stroke="#555" stroke-width="2"/>
+  <line x1="107" y1="248" x2="295" y2="248" stroke="#555" stroke-width="2"/>
+  <line x1="295" y1="248" x2="295" y2="465" stroke="#555" stroke-width="2"/>
+  <line x1="295" y1="465" x2="304" y2="465" stroke="#555" stroke-width="2"/>
+
+  <!-- Labels -->
+  <text x="30" y="278" fill="#888" font-size="8">Base ← GPIO4 via 1kΩ</text>
+  <text x="30" y="291" fill="#888" font-size="8">Collector → IR LED (−)</text>
+  <text x="30" y="304" fill="#888" font-size="8">Emitter → GND (left col)</text>
+  <text x="30" y="317" fill="#888" font-size="8">IR LED (+) → VIN (5V)</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- VS1838B RECEIVER CIRCUIT (right side)      -->
+  <!-- ══════════════════════════════════════════ -->
+  <text x="690" y="44" text-anchor="middle" fill="#8e44ad" font-size="11" font-weight="bold">IR RECEIVER (VS1838B)</text>
+  <rect x="558" y="55" width="280" height="230" rx="6" fill="#252540" stroke="#8e44ad" stroke-width="1" stroke-dasharray="4 2"/>
 
   <!-- VS1838B body -->
-  <rect x="592" y="108" width="72" height="84" rx="6" fill="#1a0030" stroke="#8e44ad" stroke-width="1.5"/>
-  <rect x="592" y="108" width="72" height="10" rx="3" fill="#8e44ad" opacity="0.4"/>
-  <text x="628" y="140" text-anchor="middle" fill="#8e44ad" font-size="9" font-weight="bold">VS1838B</text>
-  <text x="628" y="154" text-anchor="middle" fill="#8e44ad" font-size="8">38 kHz</text>
-  <text x="628" y="167" text-anchor="middle" fill="#666" font-size="8">(flat side up)</text>
+  <rect x="638" y="90" width="80" height="90" rx="6" fill="#1a0030" stroke="#8e44ad" stroke-width="1.5"/>
+  <rect x="638" y="90" width="80" height="12" rx="3" fill="#8e44ad" opacity="0.3"/>
+  <text x="678" y="122" text-anchor="middle" fill="#8e44ad" font-size="9" font-weight="bold">VS1838B</text>
+  <text x="678" y="137" text-anchor="middle" fill="#8e44ad" font-size="8">38 kHz</text>
+  <text x="678" y="151" text-anchor="middle" fill="#666" font-size="7">(flat side facing you)</text>
+  <text x="678" y="163" text-anchor="middle" fill="#555" font-size="7">OUT · GND · VCC</text>
 
   <!-- OUT pin 1 -->
-  <line x1="592" y1="178" x2="558" y2="178" stroke="#8e44ad" stroke-width="2"/>
-  <circle cx="556" cy="178" r="3" fill="#8e44ad"/>
-  <text x="552" y="175" text-anchor="end" fill="#8e44ad" font-size="9">OUT</text>
-  <text x="552" y="185" text-anchor="end" fill="#666" font-size="8">pin 1</text>
+  <line x1="638" y1="170" x2="605" y2="170" stroke="#8e44ad" stroke-width="2"/>
+  <circle cx="603" cy="170" r="3" fill="#8e44ad"/>
+  <text x="599" y="167" text-anchor="end" fill="#8e44ad" font-size="8">OUT</text>
+  <text x="599" y="177" text-anchor="end" fill="#666" font-size="7">pin 1</text>
 
   <!-- GND pin 2 -->
-  <line x1="628" y1="192" x2="628" y2="214" stroke="#555" stroke-width="2"/>
-  <circle cx="628" cy="216" r="3" fill="#555"/>
-  <text x="630" y="226" fill="#888" font-size="9">GND</text>
-  <text x="630" y="236" fill="#666" font-size="8">pin 2</text>
+  <line x1="678" y1="180" x2="678" y2="205" stroke="#555" stroke-width="2"/>
+  <circle cx="678" cy="207" r="3" fill="#555"/>
+  <text x="680" y="218" fill="#888" font-size="8">GND</text>
+  <text x="680" y="228" fill="#666" font-size="7">pin 2</text>
 
   <!-- VCC pin 3 -->
-  <line x1="664" y1="192" x2="664" y2="214" stroke="#e67e22" stroke-width="2"/>
-  <circle cx="664" cy="216" r="3" fill="#e67e22"/>
-  <text x="666" y="226" fill="#e67e22" font-size="9">VCC</text>
-  <text x="666" y="236" fill="#666" font-size="8">pin 3</text>
-  <text x="666" y="246" fill="#e67e22" font-size="8">3.3V</text>
+  <line x1="718" y1="180" x2="718" y2="205" stroke="#e67e22" stroke-width="2"/>
+  <circle cx="718" cy="207" r="3" fill="#e67e22"/>
+  <text x="720" y="218" fill="#e67e22" font-size="8">3.3V</text>
+  <text x="720" y="228" fill="#666" font-size="7">pin 3</text>
 
-  <!-- OUT → GPIO15 -->
-  <line x1="556" y1="178" x2="500" y2="178" stroke="#8e44ad" stroke-width="2"/>
-  <line x1="500" y1="178" x2="500" y2="265" stroke="#8e44ad" stroke-width="2"/>
-  <line x1="500" y1="265" x2="185" y2="265" stroke="#8e44ad" stroke-width="2"/>
+  <!-- OUT → GPIO15 right col (y=465) -->
+  <line x1="603" y1="170" x2="568" y2="170" stroke="#8e44ad" stroke-width="2"/>
+  <line x1="568" y1="170" x2="545" y2="170" stroke="#8e44ad" stroke-width="2"/>
+  <line x1="545" y1="170" x2="545" y2="465" stroke="#8e44ad" stroke-width="2"/>
+  <line x1="545" y1="465" x2="506" y2="465" stroke="#8e44ad" stroke-width="2"/>
 
-  <!-- GND pin2 → shared GND -->
-  <line x1="628" y1="216" x2="628" y2="252" stroke="#555" stroke-width="2"/>
-  <line x1="628" y1="252" x2="480" y2="252" stroke="#555" stroke-width="2"/>
-  <line x1="480" y1="252" x2="480" y2="267" stroke="#555" stroke-width="2"/>
-  <line x1="480" y1="267" x2="185" y2="267" stroke="#555" stroke-width="2"/>
+  <!-- GND pin2 → right col GND (y=480) -->
+  <line x1="678" y1="207" x2="678" y2="242" stroke="#555" stroke-width="2"/>
+  <line x1="678" y1="242" x2="525" y2="242" stroke="#555" stroke-width="2"/>
+  <line x1="525" y1="242" x2="525" y2="480" stroke="#555" stroke-width="2"/>
+  <line x1="525" y1="480" x2="506" y2="480" stroke="#555" stroke-width="2"/>
 
-  <!-- VCC pin3 → 3.3V rail (orange dashed) -->
-  <line x1="664" y1="216" x2="664" y2="260" stroke="#e67e22" stroke-width="2"/>
-  <line x1="664" y1="260" x2="470" y2="260" stroke="#e67e22" stroke-width="2"/>
-  <line x1="470" y1="260" x2="470" y2="112" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
-  <line x1="470" y1="112" x2="185" y2="112" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
-  <line x1="185" y1="112" x2="185" y2="125" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
-  <text x="490" y="108" fill="#e67e22" font-size="9">3.3V → VS1838B VCC</text>
+  <!-- VCC pin3 → 3V3 right col (y=495) -->
+  <line x1="718" y1="207" x2="718" y2="252" stroke="#e67e22" stroke-width="2"/>
+  <line x1="718" y1="252" x2="830" y2="252" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
+  <line x1="830" y1="252" x2="830" y2="495" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
+  <line x1="830" y1="495" x2="506" y2="495" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
 
-  <!-- Legend -->
-  <rect x="20" y="410" width="780" height="22" rx="4" fill="#252540"/>
-  <line x1="30" y1="421" x2="55" y2="421" stroke="#c0392b" stroke-width="2"/>
-  <text x="60" y="425" fill="#e0e0e0" font-size="10">5V (IR LED)</text>
-  <line x1="145" y1="421" x2="170" y2="421" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
-  <text x="175" y="425" fill="#e0e0e0" font-size="10">3.3V (VS1838B VCC)</text>
-  <line x1="310" y1="421" x2="335" y2="421" stroke="#555" stroke-width="2"/>
-  <text x="340" y="425" fill="#e0e0e0" font-size="10">GND</text>
-  <line x1="380" y1="421" x2="405" y2="421" stroke="#27ae60" stroke-width="2"/>
-  <text x="410" y="425" fill="#e0e0e0" font-size="10">GPIO4 TX</text>
-  <line x1="480" y1="421" x2="505" y2="421" stroke="#8e44ad" stroke-width="2"/>
-  <text x="510" y="425" fill="#e0e0e0" font-size="10">GPIO15 RX</text>
-  <line x1="580" y1="421" x2="605" y2="421" stroke="#f39c12" stroke-width="2"/>
-  <text x="610" y="425" fill="#e0e0e0" font-size="10">BC547 circuit</text>
+  <!-- Labels -->
+  <text x="568" y="258" fill="#888" font-size="8">OUT → GPIO15</text>
+  <text x="568" y="271" fill="#888" font-size="8">GND → GND (right col)</text>
+  <text x="568" y="284" fill="#e67e22" font-size="8">VCC → 3V3 (right col, dashed)</text>
+
+  <!-- ════════════════ Legend ════════════════ -->
+  <rect x="20" y="590" width="820" height="22" rx="4" fill="#252540"/>
+  <line x1="30" y1="601" x2="52" y2="601" stroke="#c0392b" stroke-width="2"/>
+  <text x="56" y="605" fill="#e0e0e0" font-size="9">5V IR LED → VIN</text>
+  <line x1="155" y1="601" x2="177" y2="601" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="181" y="605" fill="#e0e0e0" font-size="9">3.3V → 3V3</text>
+  <line x1="255" y1="601" x2="277" y2="601" stroke="#555" stroke-width="2"/>
+  <text x="281" y="605" fill="#e0e0e0" font-size="9">GND</text>
+  <line x1="320" y1="601" x2="342" y2="601" stroke="#27ae60" stroke-width="2"/>
+  <text x="346" y="605" fill="#e0e0e0" font-size="9">GPIO4 TX (IR)</text>
+  <line x1="440" y1="601" x2="462" y2="601" stroke="#8e44ad" stroke-width="2"/>
+  <text x="466" y="605" fill="#e0e0e0" font-size="9">GPIO15 RX (VS1838B)</text>
+  <line x1="620" y1="601" x2="642" y2="601" stroke="#f39c12" stroke-width="2"/>
+  <text x="646" y="605" fill="#e0e0e0" font-size="9">BC547 TX circuit</text>
 </svg>
