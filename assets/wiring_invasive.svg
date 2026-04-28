@@ -1,108 +1,238 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="monospace, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 680" font-family="monospace, sans-serif">
   <!-- Background -->
-  <rect width="800" height="340" fill="#1a1a2e" rx="12"/>
-  <text x="400" y="30" text-anchor="middle" fill="#e0e0e0" font-size="15" font-weight="bold">Invasive Wiring — ESP32 directly on Samsung AC IR Board</text>
+  <rect width="1400" height="680" fill="#1a1a2e" rx="14"/>
+  <text x="700" y="34" text-anchor="middle" fill="#e0e0e0" font-size="20" font-weight="bold">Invasive Wiring — XIAO ESP32-C6 → Samsung AC IR Board</text>
 
-  <!-- ESP32 Board -->
-  <rect x="30" y="55" width="160" height="220" rx="8" fill="#2d2d44" stroke="#4a9eff" stroke-width="1.5"/>
-  <text x="110" y="76" text-anchor="middle" fill="#4a9eff" font-size="12" font-weight="bold">ESP32</text>
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- XIAO ESP32-C6 board                        -->
+  <!-- Board x=390..645, y=120..462               -->
+  <!-- LEFT pads x=376, RIGHT pads x=646          -->
+  <!-- pitch 31px, top pad y=190                  -->
+  <!-- ═══════════════════════════════════════════ -->
 
-  <!-- 5V pin -->
-  <rect x="158" y="92" width="32" height="18" rx="3" fill="#e74c3c"/>
-  <text x="174" y="105" text-anchor="middle" fill="white" font-size="9" font-weight="bold">5V</text>
-  <text x="115" y="105" text-anchor="end" fill="#e0e0e0" font-size="10">5V (VIN)</text>
+  <!-- Board PCB body -->
+  <rect x="390" y="120" width="255" height="342" rx="12" fill="#111111" stroke="#4a9eff" stroke-width="2.5"/>
 
-  <!-- GND -->
-  <rect x="158" y="118" width="32" height="18" rx="3" fill="#555"/>
-  <text x="174" y="131" text-anchor="middle" fill="white" font-size="9" font-weight="bold">GND</text>
-  <text x="115" y="131" text-anchor="end" fill="#e0e0e0" font-size="10">GND</text>
+  <!-- USB-C -->
+  <rect x="449" y="95" width="137" height="28" rx="6" fill="#2a2a2a" stroke="#888" stroke-width="1.8"/>
+  <rect x="465" y="100" width="105" height="18" rx="4" fill="#111" stroke="#555" stroke-width="0.8"/>
+  <text x="518" y="113" text-anchor="middle" fill="#777" font-size="11">USB-C</text>
 
-  <!-- GPIO4 TX+RX -->
-  <rect x="158" y="168" width="32" height="18" rx="3" fill="#f39c12"/>
-  <text x="174" y="181" text-anchor="middle" fill="white" font-size="8" font-weight="bold">IO4</text>
-  <text x="115" y="181" text-anchor="end" fill="#e0e0e0" font-size="10">GPIO4</text>
-  <text x="115" y="193" text-anchor="end" fill="#888" font-size="8">TX + RX</text>
+  <!-- Antenna -->
+  <rect x="456" y="120" width="124" height="20" rx="4" fill="#1a1a1a" stroke="#555" stroke-width="1.2"/>
+  <path d="M466 130 Q475 124 484 130 Q493 136 502 130 Q511 124 520 130 Q529 136 538 130 Q547 124 556 130 Q565 136 570 130" fill="none" stroke="#666" stroke-width="1.5"/>
 
-  <!-- open-drain note -->
-  <rect x="38" y="220" width="144" height="42" rx="4" fill="#2a1a00" stroke="#f39c12" stroke-width="1"/>
-  <text x="110" y="236" text-anchor="middle" fill="#f39c12" font-size="9" font-weight="bold">OUTPUT_OPEN_DRAIN</text>
-  <text x="110" y="250" text-anchor="middle" fill="#888" font-size="8">allow_other_uses: true</text>
-  <text x="110" y="262" text-anchor="middle" fill="#888" font-size="8">same pin TX and RX</text>
+  <!-- Reset -->
+  <circle cx="414" cy="137" r="9" fill="#cc2222" stroke="#ff4444" stroke-width="1.5"/>
+  <text x="414" y="141" text-anchor="middle" fill="white" font-size="10" font-weight="bold">R</text>
 
-  <!-- Samsung AC IR Board -->
-  <rect x="430" y="55" width="320" height="200" rx="10" fill="#2a2a18" stroke="#f0c040" stroke-width="2"/>
-  <text x="590" y="80" text-anchor="middle" fill="#f0c040" font-size="13" font-weight="bold">Samsung AC IR Board</text>
+  <!-- Boot -->
+  <circle cx="621" cy="137" r="9" fill="#444" stroke="#777" stroke-width="1.5"/>
+  <text x="621" y="141" text-anchor="middle" fill="white" font-size="10" font-weight="bold">B</text>
 
-  <!-- IR LED on board -->
-  <circle cx="530" cy="155" r="22" fill="#111100" stroke="#f0c040" stroke-width="2"/>
-  <circle cx="530" cy="155" r="8" fill="#333300"/>
-  <text x="530" y="151" text-anchor="middle" fill="#f0c040" font-size="8">IR</text>
-  <text x="530" y="162" text-anchor="middle" fill="#f0c040" font-size="8">LED</text>
-  <!-- emission rays -->
-  <line x1="549" y1="138" x2="562" y2="126" stroke="#ffff44" stroke-width="1.5" stroke-dasharray="3 2"/>
-  <line x1="554" y1="147" x2="569" y2="140" stroke="#ffff44" stroke-width="1.5" stroke-dasharray="3 2"/>
-  <line x1="553" y1="155" x2="570" y2="155" stroke="#ffff44" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <!-- Chip -->
+  <rect x="406" y="224" width="202" height="132" rx="4" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1.5"/>
+  <text x="517" y="278" text-anchor="middle" fill="#444" font-size="12">seeed studio</text>
+  <text x="517" y="296" text-anchor="middle" fill="#333" font-size="9">XIAO-ESP32-C6</text>
 
-  <!-- IR LED signal pad / solder point -->
-  <circle cx="530" cy="198" r="7" fill="#f39c12" stroke="#fff" stroke-width="1"/>
-  <text x="530" y="215" text-anchor="middle" fill="#f39c12" font-size="9" font-weight="bold">IR OUT</text>
-  <text x="530" y="227" text-anchor="middle" fill="#888" font-size="8">signal pad</text>
-  <!-- trace from pad to LED -->
-  <line x1="530" y1="191" x2="530" y2="177" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <!-- Open-drain note inside board -->
+  <rect x="404" y="370" width="207" height="50" rx="4" fill="#2a1a00" stroke="#f39c12" stroke-width="1.2"/>
+  <text x="518" y="390" text-anchor="middle" fill="#f39c12" font-size="10" font-weight="bold">OUTPUT_OPEN_DRAIN</text>
+  <text x="518" y="408" text-anchor="middle" fill="#888" font-size="9">allow_other_uses: true  •  TX + RX</text>
 
-  <!-- GND pad -->
-  <circle cx="620" cy="198" r="7" fill="#555" stroke="#fff" stroke-width="1"/>
-  <text x="620" y="215" text-anchor="middle" fill="#888" font-size="9" font-weight="bold">GND</text>
-  <text x="620" y="227" text-anchor="middle" fill="#666" font-size="8">pad</text>
+  <!-- BAT -->
+  <circle cx="471" cy="470" r="8" fill="#1a1a1a" stroke="#666" stroke-width="1.5"/>
+  <circle cx="471" cy="470" r="3" fill="#666"/>
+  <rect x="509" y="461" width="40" height="19" rx="3" fill="#1a1a1a" stroke="#444" stroke-width="1.2"/>
+  <text x="529" y="474" text-anchor="middle" fill="#444" font-size="8.5">BAT</text>
 
-  <!-- 5V pad -->
-  <circle cx="710" cy="198" r="7" fill="#e74c3c" stroke="#fff" stroke-width="1"/>
-  <text x="710" y="215" text-anchor="middle" fill="#e74c3c" font-size="9" font-weight="bold">5V</text>
-  <text x="710" y="227" text-anchor="middle" fill="#666" font-size="8">pad</text>
+  <!-- ═══ SOLDER PADS ═══ -->
+  <!-- LEFT y: 190,221,252,283,314,345,376 -->
+  <!-- D0–D5 colored like non-invasive (c8a020), D6 active (f39c12) -->
+  <rect x="376" y="190" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="376" y="221" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="376" y="252" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="376" y="283" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="376" y="314" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="376" y="345" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="376" y="376" width="14" height="14" rx="2.5" fill="#f39c12"/>
 
-  <!-- decorative board traces -->
-  <line x1="445" y1="198" x2="523" y2="198" stroke="#444" stroke-width="1" stroke-dasharray="2 3"/>
-  <line x1="537" y1="198" x2="613" y2="198" stroke="#444" stroke-width="1" stroke-dasharray="2 3"/>
-  <line x1="627" y1="198" x2="703" y2="198" stroke="#444" stroke-width="1" stroke-dasharray="2 3"/>
+  <!-- RIGHT y: 190,221,252,283,314,345,376 -->
+  <!-- 5V red, GND grey, 3V3 orange, D10/D9/D8 yellow, D7 purple -->
+  <rect x="646" y="190" width="14" height="14" rx="2.5" fill="#c0392b"/>
+  <rect x="646" y="221" width="14" height="14" rx="2.5" fill="#555"/>
+  <rect x="646" y="252" width="14" height="14" rx="2.5" fill="#e67e22"/>
+  <rect x="646" y="283" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="646" y="314" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="646" y="345" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="646" y="376" width="14" height="14" rx="2.5" fill="#8e44ad"/>
 
-  <!-- Other LEDs on board (decorative) -->
-  <circle cx="650" cy="120" r="8" fill="#002200" stroke="#00aa00" stroke-width="1.5"/>
-  <text x="650" y="124" text-anchor="middle" fill="#00aa00" font-size="7">LED</text>
-  <circle cx="700" cy="120" r="8" fill="#002200" stroke="#00aa00" stroke-width="1.5"/>
-  <text x="700" y="124" text-anchor="middle" fill="#00aa00" font-size="7">LED</text>
+  <!-- ═══ LEFT PIN LABELS ═══ -->
+  <text x="210" y="178" text-anchor="middle" fill="#666" font-size="10">GPIO</text>
+  <text x="258" y="178" text-anchor="middle" fill="#888" font-size="10">Pin</text>
+  <text x="302" y="178" text-anchor="middle" fill="#666" font-size="10">#</text>
 
-  <!-- Wires from ESP to board pads -->
+  <!-- D0 -->
+  <line x1="376" y1="197" x2="320" y2="197" stroke="#444" stroke-width="1.2"/>
+  <text x="210" y="201" text-anchor="middle" fill="#e0c060" font-size="10">A0</text>
+  <text x="258" y="201" text-anchor="middle" fill="#f39c12" font-size="10">D0</text>
+  <text x="302" y="201" text-anchor="middle" fill="#aaa" font-size="10">0</text>
+
+  <!-- D1 -->
+  <line x1="376" y1="228" x2="320" y2="228" stroke="#444" stroke-width="1.2"/>
+  <text x="210" y="232" text-anchor="middle" fill="#e0c060" font-size="10">A1</text>
+  <text x="258" y="232" text-anchor="middle" fill="#f39c12" font-size="10">D1</text>
+  <text x="302" y="232" text-anchor="middle" fill="#aaa" font-size="10">1</text>
+
+  <!-- D2 -->
+  <line x1="376" y1="259" x2="320" y2="259" stroke="#444" stroke-width="1.2"/>
+  <text x="210" y="263" text-anchor="middle" fill="#e0c060" font-size="10">A2</text>
+  <text x="258" y="263" text-anchor="middle" fill="#f39c12" font-size="10">D2</text>
+  <text x="302" y="263" text-anchor="middle" fill="#aaa" font-size="10">2</text>
+
+  <!-- D3 -->
+  <line x1="376" y1="290" x2="320" y2="290" stroke="#444" stroke-width="1.2"/>
+  <text x="210" y="294" text-anchor="middle" fill="#00cc66" font-size="10">SS</text>
+  <text x="258" y="294" text-anchor="middle" fill="#f39c12" font-size="10">D3</text>
+  <text x="302" y="294" text-anchor="middle" fill="#aaa" font-size="10">21</text>
+
+  <!-- D4 -->
+  <line x1="376" y1="321" x2="320" y2="321" stroke="#444" stroke-width="1.2"/>
+  <text x="210" y="325" text-anchor="middle" fill="#8888ff" font-size="10">SDA</text>
+  <text x="258" y="325" text-anchor="middle" fill="#f39c12" font-size="10">D4</text>
+  <text x="302" y="325" text-anchor="middle" fill="#aaa" font-size="10">22</text>
+
+  <!-- D5 -->
+  <line x1="376" y1="352" x2="320" y2="352" stroke="#444" stroke-width="1.2"/>
+  <text x="210" y="356" text-anchor="middle" fill="#8888ff" font-size="10">SCL</text>
+  <text x="258" y="356" text-anchor="middle" fill="#f39c12" font-size="10">D5</text>
+  <text x="302" y="356" text-anchor="middle" fill="#aaa" font-size="10">23</text>
+
+  <!-- D6/GPIO16 active -->
+  <line x1="376" y1="383" x2="320" y2="383" stroke="#f39c12" stroke-width="1.8"/>
+  <rect x="178" y="374" width="142" height="18" rx="3" fill="#2a1a00"/>
+  <text x="212" y="387" text-anchor="middle" fill="#f39c12" font-size="10" font-weight="bold">TX ◄► IR</text>
+  <text x="278" y="387" text-anchor="middle" fill="#f39c12" font-size="10">D6</text>
+  <text x="312" y="387" text-anchor="middle" fill="#f39c12" font-size="10">16</text>
+
+  <!-- ═══ RIGHT PIN LABELS ═══ -->
+  <text x="672" y="178" text-anchor="middle" fill="#666" font-size="10">#</text>
+  <text x="716" y="178" text-anchor="middle" fill="#888" font-size="10">Pin</text>
+  <text x="772" y="178" text-anchor="middle" fill="#666" font-size="10">GPIO</text>
+
   <!-- 5V -->
-  <line x1="190" y1="101" x2="370" y2="101" stroke="#e74c3c" stroke-width="2"/>
-  <line x1="370" y1="101" x2="370" y2="198" stroke="#e74c3c" stroke-width="2"/>
-  <line x1="370" y1="198" x2="703" y2="198" stroke="#e74c3c" stroke-width="2"/>
+  <line x1="660" y1="197" x2="688" y2="197" stroke="#c0392b" stroke-width="2"/>
+  <text x="672" y="201" text-anchor="middle" fill="#aaa" font-size="10">—</text>
+  <text x="716" y="201" text-anchor="middle" fill="#ff6666" font-size="10" font-weight="bold">5V</text>
+  <text x="772" y="201" text-anchor="middle" fill="#aaa" font-size="10">—</text>
 
   <!-- GND -->
-  <line x1="190" y1="127" x2="355" y2="127" stroke="#555" stroke-width="2"/>
-  <line x1="355" y1="127" x2="355" y2="200" stroke="#555" stroke-width="2"/>
-  <line x1="355" y1="200" x2="613" y2="200" stroke="#555" stroke-width="2"/>
+  <line x1="660" y1="228" x2="688" y2="228" stroke="#888" stroke-width="1.8"/>
+  <text x="672" y="232" text-anchor="middle" fill="#aaa" font-size="10">—</text>
+  <text x="716" y="232" text-anchor="middle" fill="#ccc" font-size="10" font-weight="bold">GND</text>
+  <text x="772" y="232" text-anchor="middle" fill="#aaa" font-size="10">—</text>
 
-  <!-- GPIO4 IR signal -->
-  <line x1="190" y1="177" x2="340" y2="177" stroke="#f39c12" stroke-width="2.5"/>
-  <line x1="340" y1="177" x2="340" y2="202" stroke="#f39c12" stroke-width="2.5"/>
-  <line x1="340" y1="202" x2="523" y2="202" stroke="#f39c12" stroke-width="2.5"/>
+  <!-- 3V3 -->
+  <line x1="660" y1="259" x2="688" y2="259" stroke="#e67e22" stroke-width="1.8"/>
+  <text x="672" y="263" text-anchor="middle" fill="#aaa" font-size="10">—</text>
+  <text x="716" y="263" text-anchor="middle" fill="#ffaa44" font-size="10" font-weight="bold">3V3</text>
+  <text x="772" y="263" text-anchor="middle" fill="#aaa" font-size="10">—</text>
 
-  <!-- Wire labels -->
-  <text x="270" y="97" fill="#e74c3c" font-size="9">5V</text>
-  <text x="270" y="123" fill="#888" font-size="9">GND</text>
-  <text x="255" y="173" fill="#f39c12" font-size="9">IR signal</text>
+  <!-- D10 -->
+  <line x1="660" y1="290" x2="688" y2="290" stroke="#444" stroke-width="1.2"/>
+  <text x="672" y="294" text-anchor="middle" fill="#aaa" font-size="10">18</text>
+  <text x="716" y="294" text-anchor="middle" fill="#f39c12" font-size="10">D10</text>
+  <text x="772" y="294" text-anchor="middle" fill="#00cc66" font-size="10">MOSI</text>
 
-  <!-- Bottom note -->
-  <rect x="30" y="290" width="740" height="35" rx="6" fill="#1e1e3a" stroke="#4a9eff" stroke-width="1"/>
-  <text x="400" y="306" text-anchor="middle" fill="#4a9eff" font-size="10" font-weight="bold">⚠  Identify solder pads with a multimeter before connecting. Board runs at 5V — use a voltage divider on the IR signal line if needed.</text>
-  <text x="400" y="320" text-anchor="middle" fill="#888" font-size="9">Tap directly onto the IR LED signal trace on the board for most reliable TX and RX.</text>
+  <!-- D9 -->
+  <line x1="660" y1="321" x2="688" y2="321" stroke="#444" stroke-width="1.2"/>
+  <text x="672" y="325" text-anchor="middle" fill="#aaa" font-size="10">20</text>
+  <text x="716" y="325" text-anchor="middle" fill="#f39c12" font-size="10">D9</text>
+  <text x="772" y="325" text-anchor="middle" fill="#00cc66" font-size="10">MISO</text>
 
-  <!-- Legend -->
-  <line x1="30" y1="278" x2="760" y2="278" stroke="#333" stroke-width="0.5"/>
-  <line x1="40" y1="285" x2="65" y2="285" stroke="#e74c3c" stroke-width="2"/>
-  <text x="70" y="289" fill="#e0e0e0" font-size="10">5V</text>
-  <line x1="100" y1="285" x2="125" y2="285" stroke="#555" stroke-width="2"/>
-  <text x="130" y="289" fill="#e0e0e0" font-size="10">GND</text>
-  <line x1="170" y1="285" x2="195" y2="285" stroke="#f39c12" stroke-width="2"/>
-  <text x="200" y="289" fill="#e0e0e0" font-size="10">GPIO4 IR signal (TX + RX, open-drain)</text>
+  <!-- D8 -->
+  <line x1="660" y1="352" x2="688" y2="352" stroke="#444" stroke-width="1.2"/>
+  <text x="672" y="356" text-anchor="middle" fill="#aaa" font-size="10">19</text>
+  <text x="716" y="356" text-anchor="middle" fill="#f39c12" font-size="10">D8</text>
+  <text x="772" y="356" text-anchor="middle" fill="#00cc66" font-size="10">SCK</text>
+
+  <!-- D7 -->
+  <line x1="660" y1="383" x2="688" y2="383" stroke="#444" stroke-width="1.2"/>
+  <text x="672" y="387" text-anchor="middle" fill="#aaa" font-size="10">17</text>
+  <text x="716" y="387" text-anchor="middle" fill="#f39c12" font-size="10">D7</text>
+  <text x="772" y="387" text-anchor="middle" fill="#cc88ff" font-size="10">RX</text>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- SAMSUNG AC IR BOARD                                -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <rect x="920" y="120" width="420" height="310" rx="14" fill="#2a2a18" stroke="#f0c040" stroke-width="2.5"/>
+  <text x="1130" y="152" text-anchor="middle" fill="#f0c040" font-size="18" font-weight="bold">Samsung AC IR Board</text>
+
+  <!-- IR LED -->
+  <circle cx="1020" cy="258" r="40" fill="#111100" stroke="#f0c040" stroke-width="2.5"/>
+  <circle cx="1020" cy="258" r="14" fill="#333300"/>
+  <text x="1020" y="253" text-anchor="middle" fill="#f0c040" font-size="13">IR</text>
+  <text x="1020" y="269" text-anchor="middle" fill="#f0c040" font-size="13">LED</text>
+  <line x1="1054" y1="226" x2="1076" y2="204" stroke="#ffff44" stroke-width="2" stroke-dasharray="5 3"/>
+  <line x1="1063" y1="242" x2="1088" y2="232" stroke="#ffff44" stroke-width="2" stroke-dasharray="5 3"/>
+  <line x1="1062" y1="258" x2="1090" y2="258" stroke="#ffff44" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="1094" y="203" fill="#ffff44" font-size="11">940nm</text>
+
+
+
+  <!-- Solder pads -->
+  <circle cx="1020" cy="366" r="12" fill="#f39c12" stroke="#fff" stroke-width="1.5"/>
+  <text x="1020" y="392" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">IR OUT</text>
+  <line x1="1020" y1="354" x2="1020" y2="298" stroke="#f39c12" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <circle cx="1180" cy="366" r="12" fill="#555" stroke="#fff" stroke-width="1.5"/>
+  <text x="1180" y="392" text-anchor="middle" fill="#888" font-size="12" font-weight="bold">GND</text>
+
+  <circle cx="1310" cy="366" r="12" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+  <text x="1310" y="392" text-anchor="middle" fill="#c0392b" font-size="12" font-weight="bold">5V</text>
+
+  <!-- Decorative traces -->
+  <line x1="936" y1="366" x2="1008" y2="366" stroke="#444" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <line x1="1032" y1="366" x2="1168" y2="366" stroke="#444" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <line x1="1192" y1="366" x2="1298" y2="366" stroke="#444" stroke-width="1.5" stroke-dasharray="3 4"/>
+
+  <!-- ═══ WIRES ═══ -->
+
+  <!-- 5V: top bus XIAO right 5V → AC 5V pad -->
+  <line x1="660" y1="197" x2="884" y2="197" stroke="#c0392b" stroke-width="2.2"/>
+  <line x1="884" y1="197" x2="884" y2="70" stroke="#c0392b" stroke-width="2.2" stroke-dasharray="9 4"/>
+  <line x1="884" y1="70" x2="1360" y2="70" stroke="#c0392b" stroke-width="2.2" stroke-dasharray="9 4"/>
+  <line x1="1360" y1="70" x2="1360" y2="366" stroke="#c0392b" stroke-width="2.2" stroke-dasharray="9 4"/>
+  <line x1="1360" y1="366" x2="1322" y2="366" stroke="#c0392b" stroke-width="2.2"/>
+  <text x="1122" y="62" text-anchor="middle" fill="#c0392b" font-size="11">5V → AC board 5V pad</text>
+
+  <!-- GND: bottom bus XIAO right GND → AC GND pad -->
+  <line x1="660" y1="228" x2="878" y2="228" stroke="#555" stroke-width="2.2"/>
+  <line x1="878" y1="228" x2="878" y2="560" stroke="#555" stroke-width="2.2" stroke-dasharray="7 3"/>
+  <line x1="878" y1="560" x2="1376" y2="560" stroke="#555" stroke-width="2.2" stroke-dasharray="7 3"/>
+  <line x1="1376" y1="560" x2="1376" y2="368" stroke="#555" stroke-width="2.2" stroke-dasharray="7 3"/>
+  <line x1="1376" y1="368" x2="1192" y2="368" stroke="#555" stroke-width="2.2"/>
+
+  <!-- GPIO16: direct to IR signal pad -->
+  <line x1="376" y1="383" x2="178" y2="383" stroke="#f39c12" stroke-width="2.5"/>
+  <line x1="178" y1="383" x2="178" y2="580" stroke="#f39c12" stroke-width="2.5"/>
+  <line x1="178" y1="580" x2="1020" y2="580" stroke="#f39c12" stroke-width="2.5"/>
+  <line x1="1020" y1="580" x2="1020" y2="378" stroke="#f39c12" stroke-width="2.5"/>
+  <text x="599" y="600" text-anchor="middle" fill="#f39c12" font-size="11">GPIO16 / D6 — IR signal (open-drain, TX + RX)</text>
+
+  <!-- ════ Legend ════ -->
+  <rect x="22" y="620" width="560" height="40" rx="5" fill="#252540"/>
+  <line x1="38" y1="636" x2="64" y2="636" stroke="#c0392b" stroke-width="2.2"/>
+  <text x="70" y="640" fill="#e0e0e0" font-size="11">5V</text>
+  <line x1="110" y1="636" x2="136" y2="636" stroke="#555" stroke-width="2.2" stroke-dasharray="6 3"/>
+  <text x="142" y="640" fill="#e0e0e0" font-size="11">GND</text>
+  <line x1="204" y1="636" x2="230" y2="636" stroke="#f39c12" stroke-width="2.5"/>
+  <text x="236" y="640" fill="#e0e0e0" font-size="11">GPIO16 / D6 — IR signal</text>
+
+  <line x1="38" y1="654" x2="64" y2="654" stroke="#c8a020" stroke-width="2"/>
+  <text x="70" y="658" fill="#e0e0e0" font-size="11">unused D pin</text>
+  <line x1="204" y1="654" x2="230" y2="654" stroke="#e67e22" stroke-width="2"/>
+  <text x="236" y="658" fill="#e0e0e0" font-size="11">3V3</text>
+  <line x1="316" y1="654" x2="342" y2="654" stroke="#8e44ad" stroke-width="2"/>
+  <text x="348" y="658" fill="#e0e0e0" font-size="11">D7 / RX</text>
 </svg>

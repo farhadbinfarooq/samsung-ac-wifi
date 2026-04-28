@@ -32,13 +32,13 @@ external_components:
 
 ## Hardware Installation
 
-You have two options for connecting the ESP32 to your Samsung AC.
+You have two options for connecting the XIAO ESP32-C6 to your Samsung AC.
 
 ---
 
 ### Method 1 — Non-Invasive (Recommended for beginners)
 
-Build a separate IR transmitter circuit and connect a VS1838B IR receiver module to the ESP32 GPIOs. Place the ESP32 near the AC indoor unit so it can both receive signals from the physical remote and send commands to the AC IR sensor.
+Build a separate IR transmitter circuit and connect a VS1838B IR receiver module to the XIAO ESP32-C6 GPIOs. Place the board near the AC indoor unit so it can both receive signals from the physical remote and send commands to the AC IR sensor.
 
 ![Non-invasive wiring](assets/wiring_noninvasive.svg)
 
@@ -51,27 +51,29 @@ Build a separate IR transmitter circuit and connect a VS1838B IR receiver module
 
 **Connections:**
 
-| ESP32 Pin | Connects to | Notes |
+| XIAO ESP32-C6 Pin | Connects to | Notes |
 | --- | --- | --- |
-| GPIO4 | 1kΩ → Base of BC547 | IR transmit |
+| GPIO16 (TX / D6) | 1kΩ → Base of BC547 | IR transmit — left column, bottom pad |
 | 5V | IR LED Anode (+) via Collector | IR LED power |
 | GND | BC547 Emitter, VS1838B GND (pin 2) | Common ground |
-| GPIO15 | VS1838B OUT (pin 1) | IR receive |
-| 3.3V | VS1838B VCC (pin 3) | Receiver power |
+| GPIO17 (RX / D7) | VS1838B OUT (pin 1) | IR receive — right column, bottom pad |
+| 3.3V | VS1838B VCC (pin 3) | Receiver power — **must be 3.3V, not 5V** |
 
 ---
 
 ### Method 2 — Invasive (Advanced, more stable)
 
-Connect the ESP32 directly to the Samsung AC's IR board by tapping onto the IR LED signal trace. This bypasses the need for a separate IR circuit and gives much more reliable signal detection.
+Connect the XIAO ESP32-C6 directly to the Samsung AC's IR board by tapping onto the IR LED signal trace. This bypasses the need for a separate IR circuit and gives much more reliable signal detection.
 
 ![Invasive wiring](assets/wiring_invasive.svg)
 
-> ⚠️ **Warning:** Identify the correct solder pads using a multimeter before connecting. Wrong connections may damage your AC board or ESP32. The IR signal line on Samsung boards runs at 5V logic — use a voltage divider or logic level shifter if your ESP32 GPIO is not 5V tolerant.
+> ⚠️ **Warning:** Identify the correct solder pads using a multimeter before connecting. Wrong connections may damage your AC board or XIAO.
+
+> ✅ The IR signal line on Samsung AC boards runs at **3.3V logic** — it connects directly to GPIO16 with no voltage divider or level shifter required.
 
 **Solder pads to identify:**
 
-- **5V** — powers the ESP32 via VIN
+- **5V** — powers the XIAO via the 5V pad
 - **GND** — common ground
 - **IR signal** — the line driving the IR LED on the board (shared TX+RX)
 
@@ -81,7 +83,7 @@ Connect the ESP32 directly to the Samsung AC's IR board by tapping onto the IR L
 remote_receiver:
   id: ir_receiver
   pin:
-    number: GPIO4
+    number: GPIO16
     inverted: true
     mode: OUTPUT_OPEN_DRAIN
     allow_other_uses: true
@@ -90,7 +92,7 @@ remote_receiver:
 
 remote_transmitter:
   pin:
-    number: GPIO4
+    number: GPIO16
     inverted: true
     mode: OUTPUT_OPEN_DRAIN
     allow_other_uses: true
@@ -112,9 +114,9 @@ esphome:
   friendly_name: "Samsung AC"
 
 esp32:
-  board: esp32dev
+  board: seeed_xiao_esp32c6
   framework:
-    type: arduino
+    type: esp-idf   # required for XIAO ESP32-C6 — Arduino framework not supported
 
 external_components:
   - source: github://farhadbinfarooq/samsung-ac-wifi@main
@@ -141,13 +143,13 @@ logger:
 
 remote_transmitter:
   id: ir_transmitter
-  pin: GPIO4
+  pin: GPIO16       # TX / D6 — left column, bottom pad
   carrier_duty_percent: 50%
 
 remote_receiver:
   id: ir_receiver
   pin:
-    number: GPIO15
+    number: GPIO17  # RX / D7 — right column, bottom pad
     inverted: true
     mode:
       input: true

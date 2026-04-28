@@ -1,153 +1,278 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" font-family="monospace, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 810" font-family="monospace, sans-serif">
   <!-- Background -->
-  <rect width="820" height="440" fill="#1a1a2e" rx="12"/>
-  <text x="410" y="32" text-anchor="middle" fill="#e0e0e0" font-size="15" font-weight="bold">Non-Invasive Wiring — Separate IR LED + Receiver Circuit</text>
+  <rect width="1400" height="810" fill="#1a1a2e" rx="14"/>
+  <text x="700" y="34" text-anchor="middle" fill="#e0e0e0" font-size="20" font-weight="bold">Non-Invasive Wiring — Seeed Studio XIAO ESP32-C6</text>
 
-  <!-- ESP32 Board -->
-  <rect x="20" y="55" width="165" height="340" rx="8" fill="#2d2d44" stroke="#4a9eff" stroke-width="1.5"/>
-  <text x="103" y="76" text-anchor="middle" fill="#4a9eff" font-size="12" font-weight="bold">ESP32</text>
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- BOARD                                                       -->
+  <!-- Board x=572..827, y=155..497                               -->
+  <!-- LEFT pads x=564, RIGHT pads x=828                          -->
+  <!-- pitch 31px, top pad y=224                                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
 
-  <!-- 5V pin -->
-  <rect x="153" y="90" width="32" height="18" rx="3" fill="#c0392b"/>
-  <text x="169" y="103" text-anchor="middle" fill="white" font-size="9" font-weight="bold">5V</text>
-  <text x="110" y="103" text-anchor="end" fill="#e0e0e0" font-size="10">5V</text>
+  <!-- Board PCB body -->
+  <rect x="572" y="155" width="255" height="342" rx="12" fill="#111111" stroke="#4a9eff" stroke-width="2.5"/>
 
-  <!-- 3.3V pin -->
-  <rect x="153" y="116" width="32" height="18" rx="3" fill="#e67e22"/>
-  <text x="169" y="129" text-anchor="middle" fill="white" font-size="8" font-weight="bold">3V3</text>
-  <text x="110" y="129" text-anchor="end" fill="#e0e0e0" font-size="10">3.3V</text>
+  <!-- USB-C connector -->
+  <rect x="631" y="130" width="137" height="28" rx="6" fill="#2a2a2a" stroke="#888" stroke-width="1.8"/>
+  <rect x="647" y="135" width="105" height="18" rx="4" fill="#111" stroke="#555" stroke-width="0.8"/>
+  <text x="700" y="148" text-anchor="middle" fill="#777" font-size="11">USB-C</text>
 
-  <!-- GND pin -->
-  <rect x="153" y="142" width="32" height="18" rx="3" fill="#555"/>
-  <text x="169" y="155" text-anchor="middle" fill="white" font-size="9" font-weight="bold">GND</text>
-  <text x="110" y="155" text-anchor="end" fill="#e0e0e0" font-size="10">GND</text>
+  <!-- Antenna area -->
+  <rect x="638" y="155" width="124" height="20" rx="4" fill="#1a1a1a" stroke="#555" stroke-width="1.2"/>
+  <path d="M648 165 Q657 159 666 165 Q675 171 684 165 Q693 159 702 165 Q711 171 720 165 Q729 159 738 165 Q747 171 752 165" fill="none" stroke="#666" stroke-width="1.5"/>
 
-  <!-- GPIO4 TX -->
-  <rect x="153" y="196" width="32" height="18" rx="3" fill="#27ae60"/>
-  <text x="169" y="209" text-anchor="middle" fill="white" font-size="9" font-weight="bold">IO4</text>
-  <text x="110" y="209" text-anchor="end" fill="#e0e0e0" font-size="10">GPIO4</text>
-  <text x="110" y="221" text-anchor="end" fill="#888" font-size="8">TX</text>
+  <!-- Reset button -->
+  <circle cx="596" cy="172" r="9" fill="#cc2222" stroke="#ff4444" stroke-width="1.5"/>
+  <text x="596" y="176" text-anchor="middle" fill="white" font-size="10" font-weight="bold">R</text>
 
-  <!-- GPIO15 RX -->
-  <rect x="153" y="256" width="32" height="18" rx="3" fill="#8e44ad"/>
-  <text x="169" y="269" text-anchor="middle" fill="white" font-size="9" font-weight="bold">IO15</text>
-  <text x="110" y="269" text-anchor="end" fill="#e0e0e0" font-size="10">GPIO15</text>
-  <text x="110" y="281" text-anchor="end" fill="#888" font-size="8">RX</text>
+  <!-- Boot button -->
+  <circle cx="803" cy="172" r="9" fill="#555" stroke="#888" stroke-width="1.5"/>
+  <text x="803" y="176" text-anchor="middle" fill="white" font-size="10" font-weight="bold">B</text>
 
-  <!-- ── IR TRANSMITTER ── -->
-  <text x="390" y="68" text-anchor="middle" fill="#f39c12" font-size="11">IR TRANSMITTER CIRCUIT</text>
-  <rect x="300" y="78" width="150" height="195" rx="6" fill="#252540" stroke="#f39c12" stroke-width="1" stroke-dasharray="4 2"/>
+  <!-- Chip area -->
+  <rect x="598" y="264" width="202" height="132" rx="4" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1.5"/>
+  <text x="699" y="314" text-anchor="middle" fill="#444" font-size="12">seeed studio</text>
+  <text x="699" y="332" text-anchor="middle" fill="#333" font-size="9">XIAO-ESP32-C6</text>
 
-  <!-- Resistor 1kΩ -->
-  <rect x="230" y="199" width="58" height="16" rx="4" fill="#3d3d00" stroke="#f39c12" stroke-width="1"/>
-  <text x="259" y="210" text-anchor="middle" fill="#f39c12" font-size="9">1kΩ</text>
+  <!-- U.FL + BAT -->
+  <circle cx="653" cy="478" r="8" fill="#1a1a1a" stroke="#666" stroke-width="1.5"/>
+  <circle cx="653" cy="478" r="3" fill="#666"/>
+  <rect x="691" y="469" width="40" height="19" rx="3" fill="#1a1a1a" stroke="#444" stroke-width="1.2"/>
+  <text x="711" y="482" text-anchor="middle" fill="#444" font-size="8.5">BAT</text>
 
-  <!-- Wire GPIO4 → resistor -->
-  <line x1="185" y1="205" x2="230" y2="205" stroke="#27ae60" stroke-width="2"/>
-  <!-- Wire resistor → base -->
-  <line x1="288" y1="205" x2="318" y2="205" stroke="#27ae60" stroke-width="2"/>
+  <!-- ═══ SOLDER PADS ═══ -->
+  <!-- LEFT pads y: 224,255,286,317,348,379,410 -->
+  <rect x="564" y="224" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="564" y="255" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="564" y="286" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="564" y="317" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="564" y="348" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="564" y="379" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="564" y="410" width="14" height="14" rx="2.5" fill="#27ae60"/>
 
-  <!-- BC547 transistor -->
-  <circle cx="350" cy="196" r="22" fill="none" stroke="#f39c12" stroke-width="1.5"/>
-  <line x1="318" y1="196" x2="333" y2="196" stroke="#f39c12" stroke-width="2"/>
-  <line x1="333" y1="181" x2="333" y2="211" stroke="#f39c12" stroke-width="2"/>
-  <line x1="333" y1="184" x2="356" y2="171" stroke="#f39c12" stroke-width="2"/>
-  <line x1="333" y1="208" x2="356" y2="221" stroke="#f39c12" stroke-width="2"/>
-  <polygon points="353,219 360,224 356,214" fill="#f39c12"/>
-  <text x="346" y="191" fill="#f0c040" font-size="9">BC547</text>
-  <text x="312" y="240" fill="#888" font-size="8">NPN</text>
-  <text x="311" y="200" fill="#888" font-size="8">B</text>
-  <text x="358" y="168" fill="#888" font-size="8">C</text>
-  <text x="358" y="234" fill="#888" font-size="8">E</text>
+  <!-- RIGHT pads y: 224,255,286,317,348,379,410 -->
+  <rect x="828" y="224" width="14" height="14" rx="2.5" fill="#c0392b"/>
+  <rect x="828" y="255" width="14" height="14" rx="2.5" fill="#555"/>
+  <rect x="828" y="286" width="14" height="14" rx="2.5" fill="#e67e22"/>
+  <rect x="828" y="317" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="828" y="348" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="828" y="379" width="14" height="14" rx="2.5" fill="#c8a020"/>
+  <rect x="828" y="410" width="14" height="14" rx="2.5" fill="#8e44ad"/>
+
+  <!-- ═══ LEFT PIN LABELS ═══ -->
+  <text x="392" y="212" text-anchor="middle" fill="#666" font-size="10">GPIO</text>
+  <text x="440" y="212" text-anchor="middle" fill="#888" font-size="10">Pin</text>
+  <text x="484" y="212" text-anchor="middle" fill="#666" font-size="10">#</text>
+
+  <!-- D0 -->
+  <line x1="564" y1="231" x2="502" y2="231" stroke="#444" stroke-width="1.2"/>
+  <text x="392" y="235" text-anchor="middle" fill="#e0c060" font-size="10">A0</text>
+  <text x="440" y="235" text-anchor="middle" fill="#f39c12" font-size="10">D0</text>
+  <text x="484" y="235" text-anchor="middle" fill="#aaa" font-size="10">0</text>
+
+  <!-- D1 -->
+  <line x1="564" y1="262" x2="502" y2="262" stroke="#444" stroke-width="1.2"/>
+  <text x="392" y="266" text-anchor="middle" fill="#e0c060" font-size="10">A1</text>
+  <text x="440" y="266" text-anchor="middle" fill="#f39c12" font-size="10">D1</text>
+  <text x="484" y="266" text-anchor="middle" fill="#aaa" font-size="10">1</text>
+
+  <!-- D2 -->
+  <line x1="564" y1="293" x2="502" y2="293" stroke="#444" stroke-width="1.2"/>
+  <text x="392" y="297" text-anchor="middle" fill="#e0c060" font-size="10">A2</text>
+  <text x="440" y="297" text-anchor="middle" fill="#f39c12" font-size="10">D2</text>
+  <text x="484" y="297" text-anchor="middle" fill="#aaa" font-size="10">2</text>
+
+  <!-- D3 -->
+  <line x1="564" y1="324" x2="502" y2="324" stroke="#444" stroke-width="1.2"/>
+  <text x="392" y="328" text-anchor="middle" fill="#00cc66" font-size="10">SS</text>
+  <text x="440" y="328" text-anchor="middle" fill="#f39c12" font-size="10">D3</text>
+  <text x="484" y="328" text-anchor="middle" fill="#aaa" font-size="10">21</text>
+
+  <!-- D4 -->
+  <line x1="564" y1="355" x2="502" y2="355" stroke="#444" stroke-width="1.2"/>
+  <text x="392" y="359" text-anchor="middle" fill="#8888ff" font-size="10">SDA</text>
+  <text x="440" y="359" text-anchor="middle" fill="#f39c12" font-size="10">D4</text>
+  <text x="484" y="359" text-anchor="middle" fill="#aaa" font-size="10">22</text>
+
+  <!-- D5 -->
+  <line x1="564" y1="386" x2="502" y2="386" stroke="#444" stroke-width="1.2"/>
+  <text x="392" y="390" text-anchor="middle" fill="#8888ff" font-size="10">SCL</text>
+  <text x="440" y="390" text-anchor="middle" fill="#f39c12" font-size="10">D5</text>
+  <text x="484" y="390" text-anchor="middle" fill="#aaa" font-size="10">23</text>
+
+  <!-- D6/TX highlighted -->
+  <line x1="564" y1="417" x2="502" y2="417" stroke="#27ae60" stroke-width="1.8"/>
+  <rect x="362" y="408" width="140" height="18" rx="3" fill="#0d3a1a"/>
+  <text x="401" y="421" text-anchor="middle" fill="#27ae60" font-size="10" font-weight="bold">TX ◄ IR TX</text>
+  <text x="458" y="421" text-anchor="middle" fill="#f39c12" font-size="10">D6</text>
+  <text x="494" y="421" text-anchor="middle" fill="#27ae60" font-size="10">16</text>
+
+  <!-- ═══ RIGHT PIN LABELS ═══ -->
+  <text x="854" y="212" text-anchor="middle" fill="#666" font-size="10">#</text>
+  <text x="898" y="212" text-anchor="middle" fill="#888" font-size="10">Pin</text>
+  <text x="954" y="212" text-anchor="middle" fill="#666" font-size="10">GPIO</text>
+
+  <!-- 5V -->
+  <line x1="842" y1="231" x2="870" y2="231" stroke="#c0392b" stroke-width="2"/>
+  <text x="854" y="235" text-anchor="middle" fill="#aaa" font-size="10">—</text>
+  <text x="898" y="235" text-anchor="middle" fill="#ff6666" font-size="10" font-weight="bold">5V</text>
+  <text x="954" y="235" text-anchor="middle" fill="#aaa" font-size="10">—</text>
+
+  <!-- GND -->
+  <line x1="842" y1="262" x2="870" y2="262" stroke="#888" stroke-width="1.8"/>
+  <text x="854" y="266" text-anchor="middle" fill="#aaa" font-size="10">—</text>
+  <text x="898" y="266" text-anchor="middle" fill="#ccc" font-size="10" font-weight="bold">GND</text>
+  <text x="954" y="266" text-anchor="middle" fill="#aaa" font-size="10">—</text>
+
+  <!-- 3V3 -->
+  <line x1="842" y1="293" x2="870" y2="293" stroke="#e67e22" stroke-width="1.8"/>
+  <text x="854" y="297" text-anchor="middle" fill="#aaa" font-size="10">—</text>
+  <text x="898" y="297" text-anchor="middle" fill="#ffaa44" font-size="10" font-weight="bold">3V3</text>
+  <text x="954" y="297" text-anchor="middle" fill="#aaa" font-size="10">—</text>
+
+  <!-- D10 -->
+  <line x1="842" y1="324" x2="870" y2="324" stroke="#444" stroke-width="1.2"/>
+  <text x="854" y="328" text-anchor="middle" fill="#aaa" font-size="10">18</text>
+  <text x="898" y="328" text-anchor="middle" fill="#f39c12" font-size="10">D10</text>
+  <text x="954" y="328" text-anchor="middle" fill="#00cc66" font-size="10">MOSI</text>
+
+  <!-- D9 -->
+  <line x1="842" y1="355" x2="870" y2="355" stroke="#444" stroke-width="1.2"/>
+  <text x="854" y="359" text-anchor="middle" fill="#aaa" font-size="10">20</text>
+  <text x="898" y="359" text-anchor="middle" fill="#f39c12" font-size="10">D9</text>
+  <text x="954" y="359" text-anchor="middle" fill="#00cc66" font-size="10">MISO</text>
+
+  <!-- D8 -->
+  <line x1="842" y1="386" x2="870" y2="386" stroke="#444" stroke-width="1.2"/>
+  <text x="854" y="390" text-anchor="middle" fill="#aaa" font-size="10">19</text>
+  <text x="898" y="390" text-anchor="middle" fill="#f39c12" font-size="10">D8</text>
+  <text x="954" y="390" text-anchor="middle" fill="#00cc66" font-size="10">SCK</text>
+
+  <!-- D7/RX highlighted -->
+  <line x1="842" y1="417" x2="870" y2="417" stroke="#8e44ad" stroke-width="1.8"/>
+  <rect x="870" y="408" width="140" height="18" rx="3" fill="#1a0030"/>
+  <text x="890" y="421" text-anchor="middle" fill="#cc88ff" font-size="10">17</text>
+  <text x="932" y="421" text-anchor="middle" fill="#f39c12" font-size="10">D7</text>
+  <text x="990" y="421" text-anchor="middle" fill="#cc88ff" font-size="10" font-weight="bold">RX ► IR RX</text>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- IR TRANSMITTER CIRCUIT (far left)                  -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <text x="147" y="62" text-anchor="middle" fill="#f39c12" font-size="15" font-weight="bold">IR TRANSMITTER</text>
+  <rect x="22" y="76" width="310" height="358" rx="8" fill="#1e1e38" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="6 3"/>
 
   <!-- IR LED -->
-  <ellipse cx="400" cy="138" rx="16" ry="16" fill="#1a1a00" stroke="#f39c12" stroke-width="1.5"/>
-  <text x="400" y="134" text-anchor="middle" fill="#f39c12" font-size="7">IR</text>
-  <text x="400" y="144" text-anchor="middle" fill="#f39c12" font-size="7">LED</text>
-  <line x1="414" y1="125" x2="425" y2="115" stroke="#ffff00" stroke-width="1.5" stroke-dasharray="3 2"/>
-  <line x1="418" y1="132" x2="431" y2="127" stroke="#ffff00" stroke-width="1.5" stroke-dasharray="3 2"/>
-  <text x="434" y="115" fill="#ffff00" font-size="8">940nm</text>
+  <ellipse cx="112" cy="155" rx="25" ry="25" fill="#1a1a00" stroke="#f39c12" stroke-width="2.2"/>
+  <text x="112" y="150" text-anchor="middle" fill="#f39c12" font-size="10">IR</text>
+  <text x="112" y="164" text-anchor="middle" fill="#f39c12" font-size="10">LED</text>
+  <line x1="133" y1="138" x2="149" y2="124" stroke="#ffff00" stroke-width="1.8" stroke-dasharray="4 3"/>
+  <line x1="140" y1="150" x2="158" y2="143" stroke="#ffff00" stroke-width="1.8" stroke-dasharray="4 3"/>
+  <text x="162" y="124" fill="#ffff00" font-size="9">940nm</text>
 
-  <!-- Collector → LED anode -->
-  <line x1="356" y1="171" x2="385" y2="138" stroke="#f39c12" stroke-width="1.5"/>
+  <!-- BC547 transistor -->
+  <circle cx="112" cy="268" r="31" fill="none" stroke="#f39c12" stroke-width="2.2"/>
+  <line x1="47" y1="268" x2="83" y2="268" stroke="#f39c12" stroke-width="2.2"/>
+  <line x1="83" y1="246" x2="83" y2="290" stroke="#f39c12" stroke-width="2.2"/>
+  <line x1="83" y1="249" x2="115" y2="233" stroke="#f39c12" stroke-width="2.2"/>
+  <line x1="83" y1="287" x2="115" y2="303" stroke="#f39c12" stroke-width="2.2"/>
+  <polygon points="112,301 122,308 117,294" fill="#f39c12"/>
+  <text x="98" y="263" fill="#f0c040" font-size="11">BC547</text>
+  <text x="50" y="264" fill="#888" font-size="10">B</text>
+  <text x="118" y="230" fill="#888" font-size="10">C</text>
+  <text x="118" y="322" fill="#888" font-size="10">E</text>
 
-  <!-- LED cathode → 5V rail (red solid) -->
-  <line x1="400" y1="122" x2="400" y2="86" stroke="#c0392b" stroke-width="2"/>
-  <line x1="400" y1="86" x2="185" y2="86" stroke="#c0392b" stroke-width="2"/>
-  <line x1="185" y1="86" x2="185" y2="99" stroke="#c0392b" stroke-width="2"/>
-  <text x="290" y="82" text-anchor="middle" fill="#c0392b" font-size="9">5V → IR LED(+)</text>
+  <!-- Collector → LED cathode -->
+  <line x1="115" y1="233" x2="112" y2="180" stroke="#f39c12" stroke-width="1.8"/>
 
-  <!-- Emitter → GND -->
-  <line x1="356" y1="221" x2="356" y2="265" stroke="#555" stroke-width="2"/>
-  <line x1="356" y1="265" x2="185" y2="265" stroke="#555" stroke-width="2"/>
-  <line x1="185" y1="265" x2="185" y2="151" stroke="#555" stroke-width="2"/>
+  <!-- 1kΩ resistor -->
+  <rect x="28" y="258" width="56" height="19" rx="4" fill="#3d3d00" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="56" y="271" text-anchor="middle" fill="#f39c12" font-size="11">1kΩ</text>
 
-  <!-- Labels in box -->
-  <text x="308" y="258" fill="#888" font-size="9">Base ← GPIO4 via 1kΩ</text>
-  <text x="308" y="270" fill="#888" font-size="9">Collector → IR LED (+)</text>
-  <text x="308" y="282" fill="#888" font-size="9">Emitter → GND</text>
+  <!-- TX circuit labels -->
+  <text x="32" y="366" fill="#777" font-size="10">Base ← TX/D6/GPIO16 via 1kΩ</text>
+  <text x="32" y="382" fill="#777" font-size="10">Collector → IR LED (−)</text>
+  <text x="32" y="398" fill="#777" font-size="10">Emitter → GND (right GND)</text>
+  <text x="32" y="414" fill="#777" font-size="10">IR LED (+) → 5V (right 5V)</text>
 
-  <!-- ── VS1838B RECEIVER ── -->
-  <text x="640" y="68" text-anchor="middle" fill="#8e44ad" font-size="11">IR RECEIVER (VS1838B)</text>
-  <rect x="530" y="78" width="255" height="175" rx="6" fill="#252540" stroke="#8e44ad" stroke-width="1" stroke-dasharray="4 2"/>
+  <!-- LED anode (+) → 5V top bus → right 5V pad -->
+  <line x1="112" y1="130" x2="112" y2="96" stroke="#c0392b" stroke-width="2.2"/>
+  <line x1="112" y1="96" x2="1334" y2="96" stroke="#c0392b" stroke-width="2.2" stroke-dasharray="9 4"/>
+  <line x1="1334" y1="96" x2="1334" y2="231" stroke="#c0392b" stroke-width="2.2" stroke-dasharray="9 4"/>
+  <line x1="1334" y1="231" x2="1038" y2="231" stroke="#c0392b" stroke-width="2.2"/>
+  <text x="723" y="90" text-anchor="middle" fill="#c0392b" font-size="10">5V → right 5V pin</text>
+
+  <!-- TX/D6 → resistor via bottom bus -->
+  <line x1="362" y1="417" x2="336" y2="417" stroke="#27ae60" stroke-width="2.2"/>
+  <line x1="336" y1="417" x2="336" y2="622" stroke="#27ae60" stroke-width="2.2"/>
+  <line x1="336" y1="622" x2="44" y2="622" stroke="#27ae60" stroke-width="2.2"/>
+  <line x1="44" y1="622" x2="44" y2="278" stroke="#27ae60" stroke-width="2.2"/>
+  <line x1="44" y1="278" x2="84" y2="278" stroke="#27ae60" stroke-width="2.2"/>
+  <text x="190" y="640" text-anchor="middle" fill="#27ae60" font-size="10">TX/D6/GPIO16 → 1kΩ → Base</text>
+
+  <!-- Emitter → GND bus -->
+  <line x1="115" y1="303" x2="115" y2="338" stroke="#555" stroke-width="2.2"/>
+  <line x1="115" y1="338" x2="342" y2="338" stroke="#555" stroke-width="2.2"/>
+  <line x1="342" y1="338" x2="342" y2="652" stroke="#555" stroke-width="2.2" stroke-dasharray="6 3"/>
+  <line x1="342" y1="652" x2="1350" y2="652" stroke="#555" stroke-width="2.2" stroke-dasharray="6 3"/>
+  <line x1="1350" y1="652" x2="1350" y2="262" stroke="#555" stroke-width="2.2" stroke-dasharray="6 3"/>
+  <line x1="1350" y1="262" x2="1038" y2="262" stroke="#555" stroke-width="2.2"/>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- VS1838B RECEIVER CIRCUIT (bottom right)            -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <text x="1161" y="590" text-anchor="middle" fill="#8e44ad" font-size="15" font-weight="bold">IR RECEIVER (VS1838B)</text>
+  <rect x="1010" y="604" width="366" height="155" rx="8" fill="#1e1e38" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="6 3"/>
 
   <!-- VS1838B body -->
-  <rect x="592" y="108" width="72" height="84" rx="6" fill="#1a0030" stroke="#8e44ad" stroke-width="1.5"/>
-  <rect x="592" y="108" width="72" height="10" rx="3" fill="#8e44ad" opacity="0.4"/>
-  <text x="628" y="140" text-anchor="middle" fill="#8e44ad" font-size="9" font-weight="bold">VS1838B</text>
-  <text x="628" y="154" text-anchor="middle" fill="#8e44ad" font-size="8">38 kHz</text>
-  <text x="628" y="167" text-anchor="middle" fill="#666" font-size="8">(flat side up)</text>
+  <rect x="1088" y="616" width="118" height="106" rx="8" fill="#12001a" stroke="#8e44ad" stroke-width="2.2"/>
+  <rect x="1088" y="616" width="118" height="16" rx="6" fill="#8e44ad" opacity="0.3"/>
+  <text x="1147" y="651" text-anchor="middle" fill="#8e44ad" font-size="13" font-weight="bold">VS1838B</text>
+  <text x="1147" y="668" text-anchor="middle" fill="#8e44ad" font-size="11">38 kHz</text>
+  <text x="1147" y="684" text-anchor="middle" fill="#555" font-size="9">OUT · GND · VCC</text>
 
-  <!-- OUT pin 1 -->
-  <line x1="592" y1="178" x2="558" y2="178" stroke="#8e44ad" stroke-width="2"/>
-  <circle cx="556" cy="178" r="3" fill="#8e44ad"/>
-  <text x="552" y="175" text-anchor="end" fill="#8e44ad" font-size="9">OUT</text>
-  <text x="552" y="185" text-anchor="end" fill="#666" font-size="8">pin 1</text>
+  <!-- OUT pin -->
+  <line x1="1088" y1="700" x2="1042" y2="700" stroke="#8e44ad" stroke-width="2.2"/>
+  <circle cx="1039" cy="700" r="5" fill="#8e44ad"/>
+  <text x="1034" y="696" text-anchor="end" fill="#8e44ad" font-size="11">OUT</text>
 
-  <!-- GND pin 2 -->
-  <line x1="628" y1="192" x2="628" y2="214" stroke="#555" stroke-width="2"/>
-  <circle cx="628" cy="216" r="3" fill="#555"/>
-  <text x="630" y="226" fill="#888" font-size="9">GND</text>
-  <text x="630" y="236" fill="#666" font-size="8">pin 2</text>
+  <!-- GND pin -->
+  <line x1="1147" y1="722" x2="1147" y2="746" stroke="#555" stroke-width="2.2"/>
+  <circle cx="1147" cy="749" r="5" fill="#555"/>
+  <text x="1152" y="746" fill="#888" font-size="11">GND</text>
 
-  <!-- VCC pin 3 -->
-  <line x1="664" y1="192" x2="664" y2="214" stroke="#e67e22" stroke-width="2"/>
-  <circle cx="664" cy="216" r="3" fill="#e67e22"/>
-  <text x="666" y="226" fill="#e67e22" font-size="9">VCC</text>
-  <text x="666" y="236" fill="#666" font-size="8">pin 3</text>
-  <text x="666" y="246" fill="#e67e22" font-size="8">3.3V</text>
+  <!-- VCC pin -->
+  <line x1="1206" y1="722" x2="1206" y2="746" stroke="#e67e22" stroke-width="2.2"/>
+  <circle cx="1206" cy="749" r="5" fill="#e67e22"/>
+  <text x="1212" y="746" fill="#e67e22" font-size="11">3.3V</text>
 
-  <!-- OUT → GPIO15 -->
-  <line x1="556" y1="178" x2="500" y2="178" stroke="#8e44ad" stroke-width="2"/>
-  <line x1="500" y1="178" x2="500" y2="265" stroke="#8e44ad" stroke-width="2"/>
-  <line x1="500" y1="265" x2="185" y2="265" stroke="#8e44ad" stroke-width="2"/>
+  <!-- OUT → D7/RX right pad (y=417) -->
+  <line x1="1039" y1="700" x2="994" y2="700" stroke="#8e44ad" stroke-width="2.2"/>
+  <line x1="994" y1="700" x2="994" y2="417" stroke="#8e44ad" stroke-width="2.2"/>
+  <line x1="994" y1="417" x2="1010" y2="417" stroke="#8e44ad" stroke-width="2.2"/>
 
-  <!-- GND pin2 → shared GND -->
-  <line x1="628" y1="216" x2="628" y2="252" stroke="#555" stroke-width="2"/>
-  <line x1="628" y1="252" x2="480" y2="252" stroke="#555" stroke-width="2"/>
-  <line x1="480" y1="252" x2="480" y2="267" stroke="#555" stroke-width="2"/>
-  <line x1="480" y1="267" x2="185" y2="267" stroke="#555" stroke-width="2"/>
+  <!-- GND → shared bus -->
+  <line x1="1147" y1="749" x2="1147" y2="769" stroke="#555" stroke-width="2.2"/>
+  <line x1="1147" y1="769" x2="1350" y2="769" stroke="#555" stroke-width="2.2" stroke-dasharray="6 3"/>
 
-  <!-- VCC pin3 → 3.3V rail (orange dashed) -->
-  <line x1="664" y1="216" x2="664" y2="260" stroke="#e67e22" stroke-width="2"/>
-  <line x1="664" y1="260" x2="470" y2="260" stroke="#e67e22" stroke-width="2"/>
-  <line x1="470" y1="260" x2="470" y2="112" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
-  <line x1="470" y1="112" x2="185" y2="112" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
-  <line x1="185" y1="112" x2="185" y2="125" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
-  <text x="490" y="108" fill="#e67e22" font-size="9">3.3V → VS1838B VCC</text>
+  <!-- VCC → 3V3 right pad (y=293) -->
+  <line x1="1206" y1="749" x2="1206" y2="769" stroke="#e67e22" stroke-width="2.2"/>
+  <line x1="1206" y1="769" x2="1366" y2="769" stroke="#e67e22" stroke-width="2.2" stroke-dasharray="8 3"/>
+  <line x1="1366" y1="769" x2="1366" y2="293" stroke="#e67e22" stroke-width="2.2" stroke-dasharray="8 3"/>
+  <line x1="1366" y1="293" x2="1038" y2="293" stroke="#e67e22" stroke-width="2.2"/>
 
-  <!-- Legend -->
-  <rect x="20" y="410" width="780" height="22" rx="4" fill="#252540"/>
-  <line x1="30" y1="421" x2="55" y2="421" stroke="#c0392b" stroke-width="2"/>
-  <text x="60" y="425" fill="#e0e0e0" font-size="10">5V (IR LED)</text>
-  <line x1="145" y1="421" x2="170" y2="421" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3"/>
-  <text x="175" y="425" fill="#e0e0e0" font-size="10">3.3V (VS1838B VCC)</text>
-  <line x1="310" y1="421" x2="335" y2="421" stroke="#555" stroke-width="2"/>
-  <text x="340" y="425" fill="#e0e0e0" font-size="10">GND</text>
-  <line x1="380" y1="421" x2="405" y2="421" stroke="#27ae60" stroke-width="2"/>
-  <text x="410" y="425" fill="#e0e0e0" font-size="10">GPIO4 TX</text>
-  <line x1="480" y1="421" x2="505" y2="421" stroke="#8e44ad" stroke-width="2"/>
-  <text x="510" y="425" fill="#e0e0e0" font-size="10">GPIO15 RX</text>
-  <line x1="580" y1="421" x2="605" y2="421" stroke="#f39c12" stroke-width="2"/>
-  <text x="610" y="425" fill="#e0e0e0" font-size="10">BC547 circuit</text>
+  <!-- ════ Legend ════ -->
+  <rect x="22" y="666" width="960" height="26" rx="4" fill="#252540"/>
+  <line x1="34" y1="679" x2="56" y2="679" stroke="#c0392b" stroke-width="2"/>
+  <text x="62" y="683" fill="#e0e0e0" font-size="11">5V → IR LED</text>
+  <line x1="160" y1="679" x2="182" y2="679" stroke="#e67e22" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="188" y="683" fill="#e0e0e0" font-size="11">3V3 → VS1838B</text>
+  <line x1="330" y1="679" x2="352" y2="679" stroke="#555" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="358" y="683" fill="#e0e0e0" font-size="11">GND (shared bus)</text>
+  <line x1="516" y1="679" x2="538" y2="679" stroke="#27ae60" stroke-width="2"/>
+  <text x="544" y="683" fill="#e0e0e0" font-size="11">TX / D6 / GPIO16 IR TX</text>
+  <line x1="726" y1="679" x2="748" y2="679" stroke="#8e44ad" stroke-width="2"/>
+  <text x="754" y="683" fill="#e0e0e0" font-size="11">RX / D7 / GPIO17 IR RX</text>
+  <line x1="906" y1="679" x2="928" y2="679" stroke="#f39c12" stroke-width="2"/>
+  <text x="934" y="683" fill="#e0e0e0" font-size="11">BC547</text>
 </svg>
